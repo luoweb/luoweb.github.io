@@ -4,7 +4,7 @@ title: 如何使用 Jacman 主题
 tags:
 - Jekyll
 - Jacman
-categories: Jekyll
+categories: github
 description: Jacman 是一款扁平化，有着响应式设计的 Jekyll 主题。本站正式使用了 Jacman 主题。Jacman 基于 Jacman 的 Hexo 主题修改而来。你可以前往本站和 Demo 预览更多关于本主题的更多效果。如果你有任何问题或意见欢迎到 GitHub 发表 issue。
 ---
 ## 主题介绍
@@ -39,7 +39,7 @@ imglogo:
   src: img/logo.png        
 favicon: img/favicon.ico     ## 网站图标    
 apple_icon: img/jacman.jpg   ## 苹果设备上的图标，背景不要透明
-author_img: img/author.jpg   ## 网站底部的博主头像
+author_img: img/author.png   ## 网站底部的博主头像
 banner_img: img/banner.jpg   ## 博客顶部的图片
 
 close_aside: false      ##是否在文章页面自动关闭侧边栏
