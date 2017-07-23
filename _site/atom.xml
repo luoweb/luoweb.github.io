@@ -4,7 +4,7 @@
  <title>Robin's Blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2017-07-23T17:59:37+08:00</updated>
+ <updated>2017-07-23T18:15:15+08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>robin</name>
@@ -22,6 +22,30 @@
 
 &lt;!-- more --&gt;
 &lt;h2 id=&quot;环境准备&quot;&gt;环境准备&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;github账号，并基于GitHub账号创建github.io网页&lt;/li&gt;
+  &lt;li&gt;准备ruby执行环境和Bundler，在mac环境下执行
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install ruby
+gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;安装jekyll环境,并安装依赖
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;下载jekyll模版，并根据模版说明个性化修改配置，执行如下命令预览
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll server
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;预览完成后检入github库，并通过github.io查看个人网站&lt;/li&gt;
+  &lt;li&gt;编写博客文章，使用markdown工具编写博客文章，建议使用visual studio code工具&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;
+&lt;p&gt;个人github.io博客&lt;a href=&quot;http://luoweb.github.io&quot;&gt;luoweb&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
