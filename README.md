@@ -1,78 +1,200 @@
-# Jekyll-Jacman
+# 关于这个Jekyll模板主题 ⚽⚽⚽
 
-**中文 | [English](/README_en.md)**
+## 预览
 
-Jekyll-Jacman 是为 [Jekyll](http://jekyllrb.com) 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。Jacman 始于 [Hexo Jacman](https://github.com/wuchong/jacman) 移植而来。
+### 首页
 
- * [主题演示](http://simpleyyt.github.io/jekyll-jacman/)
- * [如何使用 Jacman 主题](http://simpleyyt.github.io/jekyll-jacman/jekyll/2015/09/20/how-to-use-jacman)
+![首页](https://github.com/maoxiaoke/maoxiaoke.github.io/blob/master/styles/images/blog/blog.png?raw=true)
 
-## 本地搭建
++ 首页: 博客首页
++ 博文分类: 按照categories对文章进行分类
++ 标签分类: 按照tags对文章进行分类
++ 外域链接: 存放一些想要其他网站的链接
++ DEMO: 存放个人项目
++ 打赏我: 提供donation
++ 关于我: 个人CV
 
-确保已安装`Ruby 2.1.0` 或更高版本：
+### 文章页
 
-```sh
-ruby --version
+![文章页](https://github.com/maoxiaoke/maoxiaoke.github.io/blob/master/styles/images/blog/page.png?raw=true)
+
+---
+
+## 功能简介
+
+### 提供全文搜索
+
+博客使用[`Simple-Jekyll-Search`](https://github.com/christian-fei/Simple-Jekyll-Search)提供全文搜索功能。
+
+相关介绍和操作可参考: [加入搜索功能](http://xiaokedada.com/2017/05/09/Jekyll-second/#加入搜索功能)
+
+### 提供百度统计功能
+
+博客使用[百度统计](https://tongji.baidu.com/web/welcome/login)提供统计功能。具体操作方法在官网有详细介绍。
+
+相关介绍和操作可参考: [添加网站统计](http://xiaokedada.com/2017/05/09/Jekyll-second/#添加网站统计)
+
+### 提供不蒜子pv/uv计数器
+
+[不蒜子](http://busuanzi.ibruce.info/)可以提供pv/uv的计数。好处在于可以在界面上显示访问量。
+
+相关介绍和操作可参考: [网页的pv/uv计数器](http://xiaokedada.com/2017/05/09/Jekyll-second/#网页的pvuv计数器)
+
+### 添加社会化评论功能
+
+<del>博客采用第三方评论平台[网易云跟帖](https://gentie.163.com/info.html)</del>。
+
+博客采用第三方评论平台[Gitment](https://github.com/imsun/gitment)
+
+相关介绍和操作可参考: [社会化评论](http://xiaokedada.com/2017/05/09/Jekyll-second/#社会化网页评论)
+
+### 使用canvas实现首页动态效果
+
+### 使用日历控件显示当前日期
+
+[在线演示](http://xiaokedada.com/effects/demo/demo-calender/index.html)
+
+### 使用tagCloud控件实现云标签效果
+
+[在线演示](http://xiaokedada.com/effects/demo/demo-tagscloud/index.html)
+
+---
+
+## 博客使用方法
+
+初识Jekyll博客，有必要了解[Jekyll](https://jekyllrb.com/)有关知识。
+
+相关的内容我写了两篇文章可供参考
+
++ [基于Jekyll静态框架的Github站点设计](http://xiaokedada.com/2017/02/22/Jekyll-Cpanel/)
++ [Jekyll搭建博客--人类补完计划](http://xiaokedada.com/2017/05/09/Jekyll-second/)
+
+### 部署和安装
+
+请参考[Jekyll相关](http://xiaokedada.com/2017/02/22/Jekyll-Cpanel/#jekyll相关)。
+
+### 下载本博客源码
+
+欢迎fork, clone and star。
+
+### 修改_config.yml文件
+
+包括相关的一些设置参数，包括banner/motto/description等。
+
+> 直接修改便会生效。
+
+### 写文章
+
+文章放在`_post`文件夹下，可创建自命名文件夹。支持markdown编写，提供`post`(知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议)/`original`(原创文章)两种方式。
+
+文件命名示例如下:
+
+```
+2017-03-23-More-of-prototype.md
 ```
 
-安装`Bundler`：
+文章首部字段为:
 
-```sh
-gem install bundler
+```markdown
+---
+layout: post
+title: "再谈原型和继承"
+date: 2017-03-23 09:00:00 +0800
+categories: 研究生涯
+tag: JavaScript
+---
+* content
+{:toc}
 ```
 
-下载 Jacman 主题：
+多tag可参考文章:[加入多个标签](http://xiaokedada.com/2017/05/09/Jekyll-second/#如何加入多个标签)
 
-```sh
-git clone https://github.com/Simpleyyt/jekyll-jacman.git
-cd jekyll-jacman
+> 备注一: Jekyll使用时间对文章进行排序，所以无论如何建立文件夹和文件夹命名都行，你开心就好
+
+> 备注二: 未完成的草稿文章可以放在`_draft`文件夹中
+
+### 运行
+
+使用下面命令可直接运行:
+
+```bash
+$ jekyll s
 ```
 
-安装依赖：
+会开启jekyll服务器，监听在`http://127.0.0.1:4000/`，使用浏览器访问呢。
 
-```sh
-bundle install
+不想查看效果，可直接bulid。
+
+```bash
+$ jekyll build
 ```
 
-运行 Jekyll：
+> 备注: 草稿区的内容不会显示，如果想要对草稿去内容进行查看，可参考[开启草稿](http://xiaokedada.com/2017/05/09/Jekyll-second/#jekyll的一些使用技巧)
 
-```sh
-bundle exec jekyll server
+### 发布
+
+发布请保留主题来源。
+
+```text
+Copyright © 2017 M/J. All rights reserved.
 ```
 
-更多细节可以参考：[Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+---
 
-## 功能
+## Update Log
 
-- **菜单 menu**  
- 主导航菜单
-- **控件 widget**  
- 侧边栏的控件。包括：Github 名片	、分类、标签、RSS、友情链接、微博秀。
-- **图片相关 Image**  
- 设置网站图标、网站logo、作者头像、博客顶部大图等。还提供了多种图片样式`img-logo`,`img-topic`,`img-center`等。
-- **首页模式 index**  
- 主题提供了两种首页展示模式。
-- **作者 author**  
- 作者信息，主要用于展示网站右下角的社交网络链接。包括：微博、豆瓣、知乎、邮箱、GitHub、StackOverflow、Twitter、Facebook、Linkedin、Google+。
-- **目录 toc**  
- 在文章中和侧边栏可以显示目录。
-- **评论 comments**  
- 支持 [多说](http://duoshuo.com/) & [disqus](https://disqus.com/) 评论。
-- **分享 jiathis**  
- 启用 内建分享工具 或 [加网](http://www.jiathis.com/) 分享系统。
-- **网站统计 Analytiscs**  
- 支持 [谷歌统计](http://www.google.com/analytics/) & [百度统计](http://tongji.baidu.com/) & [CNZZ站长统计](http://www.cnzz.com/)。
-- **Search**  
- 支持 [谷歌自定义搜索](https://www.google.com/cse/ ) & [百度站内搜索](http://zn.baidu.com/)  &[微搜索](http://tinysou.com/)。 &[Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-- **totop**  
- 回到顶部。
-- **rss**  
- RSS 订阅链接。
-- **fancybox**  
- 图片查看的 [Fancybox](http://fancyapps.com/fancybox/) 工具。
-- **其他**
- 你可以设置侧边栏在博文页面中不显示。
+### 2017.07.16
 
-## 协议
+- [-] 删除网易云跟帖
+- [+] 将网易云跟帖更改为gitment
+- [+] 添加一个新模块: TalkToMe
 
-[MIT](/LICENSE)
+### 2017.06.17
+
+- [^] 改变文章字体
+- [+] 增加不蒜子
+- [^] 将多说更改为网易云跟帖
+- [+] 添加搜索功能
+- [^] 代码高亮改为rouge
+
+
+### 2017.04.20
+
+- [+] First commit
+- [+] 添加首页Canvas效果
+- [+] 添加日历控件
+- [+] 添加云标签控件
+- [+] 添加社会化评论多说
+- [+] 大量优化
+- [+] 添加favicon.ico
+
+---
+
+## 打赏
+
+<p align="center">所以，如果你喜欢这个博客，有些许收获。就请支持我。</p>
+
+### 赞助方式1： 支付宝付款
+
+您可以选择手机支付宝扫一扫
+
+<img src="https://github.com/maoxiaoke/maoxiaoke.github.io/blob/master/styles/images/zhifubao.jpg?raw=true" alt="支付宝二维码付款给小可嗒嗒" />
+
+### 赞助方式2： 微信扫一扫
+
+您可以选择手机微信扫一扫
+
+![微信二维码付款给小可嗒嗒](https://github.com/maoxiaoke/maoxiaoke.github.io/blob/master/styles/images/wechat.jpg?raw=true)
+
+### 赞助名单
+
++ 2017-02-21 09:52:10 收到微信用户xxx的`￥1.00`
++ 2017-02-21 15:59:00 收到支付宝用户241***@qq.com的`￥6.66`
++ 2017-02-21 19:53:37 收到微信用户xxx的`￥6.66`
++ 2017-02-21 22:33:33 收到微信用户xxx`￥6.66`
++ 2017-02-22 08:36:00 收到支付宝用户116***@qq.com的`￥1.66`
++ 2017-07-24 22:05:00 收到支付宝用户118***10的`￥6.66`
+
+手动笔芯
+
+---

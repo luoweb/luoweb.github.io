@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>深入理解 ES6</title>
+	<meta name="description" content="ROBIN的个人博客、web、前端、javascript、css、html、H5、CSS3、web前端工程师、gulp、jekyll、git">
+	<meta name="keywords" content="web、前端、webapp、个人博客、技术博客、github博客、javascript、css、html、H5、CSS3、web前端工程师、gulp" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="author" contect="robin, luweb@foxmail.com">
+	<meta name="robots" content="index,follow">
+	<link rel="shortcut icon" href="/styles/images/favicon.png">
+	<link rel="icon" href="/styles/images/favicon.png">
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="canonical" href="http://localhost:4000">
+	<!--[if lte IE 9]>
+    	<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  	<![endif]-->
+	<!--[if lt IE 9]>
+    	<script>window.location.href='/upgrade-your-browser.html';</script>
+    <![endif]-->
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+  			var hm = document.createElement("script");
+  			hm.src = "https://hm.baidu.com/hm.js?40ab350f7c60a488b8e8093960c0faf2";
+  			var s = document.getElementsByTagName("script")[0]; 
+  			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+  <body class="index">
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/styles/images/logo.png" alt="ROBIN的个人博客">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li></li>
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="/categories/">博文分类</a>
+        </li>
+        <li>
+          <a href="/tag">标签目录</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a rel="nofollow" href="/reference">外域链接</a></li> -->
+        <li><a href="/effects">DEMO</a></li>
+        <li><a href="/donate">打赏我</a></li>
+        <li><a rel="nofollow" href="/me">关于我</a></li> 
+        <!-- <li><a rel="nofollow" href="/talktome">TalkToMe</a></li> -->
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header pa" id="content">
+    <canvas id="mycanvas">你的浏览器不支持canvas</canvas>
+    <div class="container" >
+  	
+        <!--
+		    <h1>深入理解 ES6</h1>
+		    <p>Post on Oct 21, 2017 by <a href="/about">Robin</a></p>
+		-->
+        <h1>坚持 超脱 存在</h1>
+    
+  </div>
+</div>
+    
+      
+<div class="banner">
+  <div class="container lh30">
+  	
+    	<a href="/categories/#研究生涯-ref">研究生涯</a>	/
+    	<a href="/tag/#JavaScript-ref">JavaScript</a>
+    
+      <div id="search-container" class="pull-right">
+          <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
+          <label class="searchIcon glyphicon glyphicon-search" for="search-input"></label>
+          <ul id="results-container"></ul>
+      </div>
+  </div>
+</div>
+
+    
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2017">2017</a>
+          <ul class="nav">
+            <li><a href="#month_2017_November">November</a></li>
+      
+
+      
+            
+          
+              <li><a href="#month_2017_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_June">June</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_April">April</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_March">March</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_February">February</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_January">January</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">深入理解 ES6</h1>
+              <!--
+                <p class="post-meta">Oct 21, 2017</p>
+              -->
+              <div class="meta">Date： <span class="postdate">Oct 21, 2017</span> Author： <a target="_blank" href="http://localhost:4000">Robin</a></div>
+              <br />
+              <blockquote><p>本文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"> 知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 </a>进行许可。转载请注明来自<a href="http://xiaokedada.com">ROBIN的博客</a></p></blockquote>
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#最佳实践使用-letconst" id="markdown-toc-最佳实践使用-letconst">最佳实践，使用 let/const</a>    <ul>
+      <li><a href="#块级作用域的理解" id="markdown-toc-块级作用域的理解">块级作用域的理解</a></li>
+      <li><a href="#temporal-dead-zone" id="markdown-toc-temporal-dead-zone">temporal dead zone</a></li>
+      <li><a href="#不允许重复声明" id="markdown-toc-不允许重复声明">不允许重复声明</a></li>
+      <li><a href="#const-用来声明对象" id="markdown-toc-const-用来声明对象">const 用来声明对象</a></li>
+      <li><a href="#全局作用域使用-letconst" id="markdown-toc-全局作用域使用-letconst">全局作用域使用 let/const</a></li>
+      <li><a href="#可以更新的写法" id="markdown-toc-可以更新的写法">可以更新的写法</a>        <ul>
+          <li><a href="#ifwhileforforofforin-循环" id="markdown-toc-ifwhileforforofforin-循环">if/while/for/for…of/for…in 循环</a></li>
+          <li><a href="#保护现场" id="markdown-toc-保护现场">保护现场</a></li>
+          <li><a href="#forinforof-中-const-的异常表现" id="markdown-toc-forinforof-中-const-的异常表现">for…in/for…of 中 const 的异常表现</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#函数的性能优化" id="markdown-toc-函数的性能优化">函数的性能优化</a>    <ul>
+      <li><a href="#携带默认参数的函数" id="markdown-toc-携带默认参数的函数">携带默认参数的函数</a>        <ul>
+          <li><a href="#默认参数值" id="markdown-toc-默认参数值">默认参数值</a></li>
+          <li><a href="#默认参数表达式" id="markdown-toc-默认参数表达式">默认参数表达式</a></li>
+          <li><a href="#arguments-的怪异之处" id="markdown-toc-arguments-的怪异之处">arguments 的怪异之处</a></li>
+        </ul>
+      </li>
+      <li><a href="#rest-参数" id="markdown-toc-rest-参数">rest 参数</a></li>
+      <li><a href="#name-属性" id="markdown-toc-name-属性">name 属性</a></li>
+    </ul>
+  </li>
+  <li><a href="#spread-运算符" id="markdown-toc-spread-运算符">Spread 运算符</a>    <ul>
+      <li><a href="#用来替换-apply" id="markdown-toc-用来替换-apply">用来替换 apply</a></li>
+      <li><a href="#将类数组转换为数组" id="markdown-toc-将类数组转换为数组">将类数组转换为数组</a></li>
+      <li><a href="#合并和复制数组" id="markdown-toc-合并和复制数组">合并和复制数组</a></li>
+      <li><a href="#解构" id="markdown-toc-解构">解构</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>在<a href="/2017/07/20/Clean-Code">编写自己的代码库</a>中我曾经表达了自己对 JavaScript 的理解。今日(2017.10.21)阅读 Nicholas C.Zakes 的 《Understanding ES6》，Redux 的创造者 Dan Abramov 在序言中提到：</p>
+
+<blockquote>
+  <p>JavaScript was not a toy language.</p>
+</blockquote>
+
+<p>是的，JavaScript 并不是(或者说不再是)一门“玩具”语言了。所以不，本文主要聚焦于 ES6 的一些 new feature，以及表达一些自我的理解。</p>
+
+<!-- more -->
+
+<h2 id="最佳实践使用-letconst">最佳实践，使用 let/const</h2>
+
+<h3 id="块级作用域的理解">块级作用域的理解</h3>
+
+<p>在 JavaScript 中，很多人会把<em>块级作用域</em>和<em>函数作用域</em>分离开来。其实，块级作用域(也叫词法作用域)包含两块：</p>
+
+<ul>
+  <li>其一就是函数作用域，在函数内部</li>
+  <li>其二就是块，即 <code class="highlighter-rouge">{}</code> 中间</li>
+</ul>
+
+<p>所以，JavaScript 引入 <code class="highlighter-rouge">let/const</code> 就是为了解决第二类块级作用域的问题。</p>
+
+<h3 id="temporal-dead-zone">temporal dead zone</h3>
+
+<p>涉及到 let/const 的具体实现方面，会接触到暂时性死区 (TDZ) 这个概念。首先，把我的结论亮出来：<strong>使用 let/const 声明的变量存在 hoisting</strong>。</p>
+
+<p>在编译器在扫描代码发现变量声明时，遇到 var 声明的变量，就将它们提升至<strong>作用域顶部</strong>，遇到 let/const 声明的变量则放入 TDZ 中。<strong>TDZ 在变量声明后终结，而不是赋值后</strong>。在块级作用域结束时，变量立刻被垃圾回收器回收。我们看下面这个例子：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'outer value'</span><span class="p">;</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// Reference error</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'inner value'</span><span class="p">;</span>
+<span class="p">}());</span>
+</code></pre></div></div>
+
+<p>这里，如果 let 声明的变量不提升的话，会输出 ‘outer value’，但实际输出会报错。这就是说 <code class="highlighter-rouge">lex x = 'inner value'</code> 会被提升，但在声明前无法被访问(放入 TDZ 区域)。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//console.log(aLet); //Reference error</span>
+<span class="kd">let</span> <span class="nx">yuer</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">yuer</span><span class="p">);</span> <span class="c1">// undefined</span>
+<span class="nx">yuer</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">yuer</span><span class="p">);</span> <span class="c1">// 10</span>
+</code></pre></div></div>
+
+<p>上面这段代码是解释 TDZ 的一个 Life cycle。</p>
+
+<p>再看一个例子：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">f</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">f</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="p">}</span> <span class="c1">//Reference error</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>更多的参考：<a href="https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone">What is the temporal dead zone?</a> <a href="http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified">TEMPORAL DEAD ZONE (TDZ) DEMYSTIFIED</a> <a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/">ES6 In Depth: let and const</a> <a href="https://ponyfoo.com/articles/es6-let-const-and-temporal-dead-zone-in-depth">ES6 Let, Const and the “Temporal Dead Zone” (TDZ) in Depth</a></p>
+</blockquote>
+
+<h3 id="不允许重复声明">不允许重复声明</h3>
+
+<p>在使用 var 的时代中，我们可以写出下面的代码：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">xiaoke</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">xiaoke</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">xiaoke</span><span class="p">);</span><span class="c1">// 3</span>
+</code></pre></div></div>
+
+<p>在严格模式下，这段代码是不报错的。但是 let/const 不允许这种行为发生。也就是下面的代码都会报错。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'use strict'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">xiaoke</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">xiaoke</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">xiaoke</span><span class="p">);</span> <span class="c1">//SyntaxError</span>
+
+<span class="kd">let</span> <span class="nx">love</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">love</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">love</span><span class="p">);</span> <span class="c1">//SyntaxError</span>
+
+<span class="kd">var</span> <span class="nx">yuer</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">yuer</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">yuer</span><span class="p">);</span> <span class="c1">//SyntaxError</span>
+</code></pre></div></div>
+
+<p>const 也是同理。但是注意的是，如果内嵌另一个作用域，便可在内嵌的作用域中用 let 声明同名变量。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">//对的</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="const-用来声明对象">const 用来声明对象</h3>
+
+<p>const 用来表示一个常量，一般来说，我们该为常量使用大写命名，但这适用于一些在执行前就已知的值。对于在执行期间实时计算出来的不变的值，最好使用常规命名。</p>
+
+<p>需要注意的是，const 声明不允许修改绑定，但允许修改值。也就是说，对于引用类型，引用是无法修改的，但所指向的内容是可以的。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'use strict'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'yuer'</span>
+<span class="p">};</span>
+
+<span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'xiaoke'</span><span class="p">;</span> <span class="c1">// 对</span>
+
+<span class="cm">/*
+person = {
+    name: ‘xiaoke' // SyntaxError
+}*/</span>
+</code></pre></div></div>
+
+<p>我们可以这样来验证：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'use strict'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'yuer'</span>
+<span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">getOwnPropertyDescriptor</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span><span class="s1">'name'</span><span class="p">));</span>
+<span class="cm">/*
+{ value: 'yuer',
+  writable: true,
+  enumerable: true,
+  configurable: true }
+*/</span>
+</code></pre></div></div>
+
+<h3 id="全局作用域使用-letconst">全局作用域使用 let/const</h3>
+
+<p>全局作用域内使用 let/const 和 var 的一个区别是，var 创建的变量会成为全局对象(通常是浏览器，即 window 对象)的一个属性，也意味着会可能会无意中覆盖已经存在的全局变量。</p>
+
+<p>如果使用 let/const，不会自动添加为全局对象的属性。</p>
+
+<h3 id="可以更新的写法">可以更新的写法</h3>
+
+<h4 id="ifwhileforforofforin-循环">if/while/for/for…of/for…in 循环</h4>
+
+<p>使用 let 代替 var，这没什么好说的。</p>
+
+<h4 id="保护现场">保护现场</h4>
+
+<p>在循环中使用函数，经常我们会采用 IIFE 来保护现场。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+    <span class="nx">setTimeout</span><span class="p">((</span><span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">})(</span><span class="nx">i</span><span class="p">),</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>有了 let/const，就不需要这么折腾了。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">},</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="forinforof-中-const-的异常表现">for…in/for…of 中 const 的异常表现</h4>
+
+<p>const 一般不会用在 for 循环中，比如：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+    <span class="c1">//do something</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>i 被声明为常量，在 for 循环中会面临修改。因此会抛出错误。</p>
+
+<p>但在 for…in 和 for…of 中使用不会产生错误：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'yuer'</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span><span class="mi">22</span>
+<span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>这是因为 for…in/for…of 中，每次迭代不会试图修改已有绑定，而是创建一个新绑定。但是如果你试图修改 key 的值，则会抛出错误：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'yuer'</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span><span class="mi">22</span>
+<span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">){</span>
+    <span class="nx">key</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">().</span><span class="nx">toString</span><span class="p">();</span> <span class="c1">//TypeError</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>当然了，const 的安全性更强，所以社区的一个做法日益普及：<strong>默认使用 const，只有确实需要改变变量的情况下使用 let</strong>。</p>
+
+<hr />
+
+<h2 id="函数的性能优化">函数的性能优化</h2>
+
+<p>ES6 对函数进行了大量改进。</p>
+
+<h3 id="携带默认参数的函数">携带默认参数的函数</h3>
+
+<p>以前的写法中，通常使用 <code class="highlighter-rouge">||</code> 运算符来提供参数默认值。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">timeout</span><span class="p">,</span> <span class="nx">method</span><span class="p">){</span>
+    <span class="nx">timeout</span> <span class="o">=</span> <span class="nx">timeout</span> <span class="o">||</span> <span class="mi">2000</span><span class="p">;</span>
+    <span class="c1">//do something</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>有一个弊端就是，如果我们给 <code class="highlighter-rouge">timeout</code> 传入 <code class="highlighter-rouge">0</code>，<code class="highlighter-rouge">timeout</code> 也会采用默认值 <code class="highlighter-rouge">2000</code>。我们可以通过下面的方法来解决：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">timeout</span><span class="p">,</span> <span class="nx">method</span><span class="p">){</span>
+    <span class="nx">timeout</span> <span class="o">=</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">timeout</span> <span class="o">!==</span> <span class="s2">"undefined"</span><span class="p">)</span> <span class="p">?</span> <span class="nx">timeout</span> <span class="o">||</span> <span class="mi">2000</span><span class="p">;</span>
+    <span class="c1">//do something</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>ES6 对这一操作进行了改进。</p>
+
+<h4 id="默认参数值">默认参数值</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span> <span class="nx">method</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="s1">'xiaoke'</span><span class="p">}){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">timeout</span><span class="p">,</span><span class="nx">method</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">();</span>                                      <span class="c1">//(1) undefined 2000 'xiaoke'</span>
+<span class="nx">foo</span><span class="p">(</span><span class="s1">'http://xiaokedada.com'</span><span class="p">);</span>               <span class="c1">//(2) http://xiaokedada.com 2000 xiaoke</span>
+<span class="nx">foo</span><span class="p">(</span><span class="s1">'http://xiaokedada.com'</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>          <span class="c1">//(3) http://xiaokedada.com 400 xiaoke</span>
+<span class="nx">foo</span><span class="p">(</span><span class="s1">'http://xiaokedada.com'</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span><span class="kd">function</span> <span class="nx">bar</span><span class="p">(){</span><span class="k">return</span> <span class="s1">'yuer'</span><span class="p">});</span>  <span class="c1">//(4) http://xiaokedada.com 2000 yuer</span>
+<span class="nx">foo</span><span class="p">(</span><span class="s1">'http://xiaokedada.com'</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span><span class="kd">function</span> <span class="nx">bar</span><span class="p">(){</span><span class="k">return</span> <span class="s1">'yuer'</span><span class="p">});</span>       <span class="c1">//(5) http://xiaokedada.com null yuer</span>
+</code></pre></div></div>
+
+<p>总结一下：</p>
+
+<ul>
+  <li>使用 <code class="highlighter-rouge">=</code> 给参数添加默认值</li>
+  <li>需要给参数主动传入 <code class="highlighter-rouge">undefined</code>，才会使用默认值(示例4)。<code class="highlighter-rouge">null</code> 是个合法值(示例5)。</li>
+</ul>
+
+<h4 id="默认参数表达式">默认参数表达式</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getValue</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span> <span class="o">=</span> <span class="nx">getValue</span><span class="p">(</span><span class="nx">first</span><span class="p">)){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">foo</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>    <span class="c1">//7</span>
+<span class="nx">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>   <span class="c1">//2</span>
+</code></pre></div></div>
+
+<p>上式表示，第二个参数不传入，会默认使用表达式计算出的值作为 second 的默认参数值。</p>
+
+<p>但如果下面这样呢？ first 依赖 second 取得默认值的情况下，给 first 传递 <code class="highlighter-rouge">undefined</code>。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getValue</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">first</span> <span class="o">=</span> <span class="nx">getValue</span><span class="p">(</span><span class="nx">second</span><span class="p">),</span> <span class="nx">second</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>   <span class="c1">//ReferenceError</span>
+</code></pre></div></div>
+
+<p>这涉及到暂时性死区 (TDZ) 的问题，上述的调用可以想象成：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">first</span> <span class="o">=</span> <span class="nx">getValue</span><span class="p">(</span><span class="nx">second</span><span class="p">);</span>   <span class="c1">//访问 TDZ 中的变量，错误</span>
+<span class="kd">let</span> <span class="nx">second</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>函数参数有自己的作用域和暂时性死区，其与函数体的作用域是各自独立的，也就是说参数的默认值不可访问函数体内声明的变量。</p>
+</blockquote>
+
+<h4 id="arguments-的怪异之处">arguments 的怪异之处</h4>
+
+<p>非严格模式下：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">mix</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>    <span class="c1">//true</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">second</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>   <span class="c1">//true</span>
+    <span class="nx">first</span> <span class="o">=</span> <span class="s1">'c'</span><span class="p">;</span>
+    <span class="nx">second</span> <span class="o">=</span> <span class="s1">'d'</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>    <span class="c1">//true</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">second</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>   <span class="c1">//true</span>
+<span class="p">}</span>
+<span class="nx">mix</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>在这种情况下，函数参数的变化会同步更新到 arguments 对象中。<strong>在严格模式中，取消了这种怪异方式</strong>。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'use strict'</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">mix</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>    <span class="c1">//true</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">second</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>   <span class="c1">//true</span>
+    <span class="nx">first</span> <span class="o">=</span> <span class="s1">'c'</span><span class="p">;</span>
+    <span class="nx">second</span> <span class="o">=</span> <span class="s1">'d'</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>    <span class="c1">//false</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">second</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>   <span class="c1">//false</span>
+<span class="p">}</span>
+<span class="nx">mix</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>ES6 函数默认参数值的行为与 ES5 严格模式 arguments 保持一致。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">mix</span><span class="p">(</span><span class="nx">first</span> <span class="o">=</span> <span class="s1">'c'</span><span class="p">,</span> <span class="nx">second</span><span class="o">=</span><span class="s1">'d'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kr">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">second</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="p">}</span>
+<span class="nx">mix</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">);</span>   <span class="c1">//2 true true</span>
+<span class="nx">mix</span><span class="p">(</span><span class="s1">'a'</span><span class="p">);</span>       <span class="c1">//1 true false</span>
+<span class="nx">mix</span><span class="p">();</span>          <span class="c1">//0 false false</span>
+<span class="nx">mix</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span><span class="s1">'b'</span><span class="p">);</span> <span class="c1">//2 false true</span>
+</code></pre></div></div>
+
+<p>以第二个为例，和下面的代码是一致的。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">mix</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">second</span> <span class="o">=</span> <span class="s1">'d'</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kr">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">second</span> <span class="o">===</span> <span class="kr">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="p">}</span>
+<span class="nx">mix</span><span class="p">(</span><span class="s1">'a'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="rest-参数">rest 参数</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">first</span><span class="p">,...</span><span class="nx">keys</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">keys</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">,</span><span class="s1">'d'</span><span class="p">);</span>   <span class="c1">//b c d</span>
+</code></pre></div></div>
+
+<p>用法很简单：<strong>rest 参数 keys 包含了 first 之后传入的所有参数</strong>。引入 rest 参数的设计初衷是替代 arguments。即这样：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(...</span><span class="nx">keys</span><span class="p">){</span>
+    <span class="c1">//do something</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>rest 参数的限制是：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">first</span><span class="p">,...</span><span class="nx">keys</span><span class="p">,</span><span class="nx">last</span><span class="p">){</span>
+    <span class="c1">//do something</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>这种写法会抛出错误，也是不被允许的。</p>
+
+<hr />
+
+<h3 id="name-属性">name 属性</h3>
+
+<p>name 属性主要是由于匿名表达式地大量使用，调试难度增加，从而为所有函数提供 name 属性。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(){}</span>
+<span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){};</span>
+<span class="kd">var</span> <span class="nx">yuer</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">xiaoke</span><span class="p">(){};</span>
+
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="kd">get</span> <span class="nx">firstName</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s2">"yuer"</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="na">sayName</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){}</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// "foo"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// "bar"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">yuer</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// "xiaoke"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">sayName</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>   <span class="c1">// "sayName"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">.</span><span class="nx">bind</span><span class="p">().</span><span class="nx">name</span><span class="p">);</span>   <span class="c1">// "bound bar"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="k">new</span> <span class="nb">Function</span><span class="p">()).</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// "anonymous"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="spread-运算符">Spread 运算符</h2>
+
+<p><code class="highlighter-rouge">...</code> 运算符作用于数组操作，将数组元素分离成为单独的元素。</p>
+
+<blockquote>
+  <p>在函数调用时，我们也用到这个 <code class="highlighter-rouge">...</code> 来表示 rest 参数</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(...[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>    <span class="c1">//1 2 3</span>
+</code></pre></div></div>
+
+<h3 id="用来替换-apply">用来替换 apply</h3>
+
+<p>比如，下面这个例子求数组元素的最大值：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nb">Math</span><span class="p">,</span> <span class="nx">values</span><span class="p">));</span>  <span class="c1">//34</span>
+</code></pre></div></div>
+
+<p>这是因为 <code class="highlighter-rouge">Math.max(arg1,arg2,arg3,...)</code> 只能处理分离的数字，我们可以巧妙地使用 <code class="highlighter-rouge">...</code> 操作符。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">values</span><span class="p">));</span>   <span class="c1">//34</span>
+</code></pre></div></div>
+
+<p>将 <code class="highlighter-rouge">...</code> 运算符和数组的结合视为一般参数的话，能更多地扩展它的功能。比如：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">values</span><span class="p">,</span><span class="mi">50</span><span class="p">));</span>    <span class="c1">//50</span>
+</code></pre></div></div>
+
+<p>再举个例子：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">];</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span><span class="nx">z</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span><span class="o">+</span><span class="nx">y</span><span class="o">+</span><span class="nx">z</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//console.log(foo.apply(null, values));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">(...</span><span class="nx">values</span><span class="p">));</span>    <span class="c1">// 终于可以不用该死的 null</span>
+</code></pre></div></div>
+
+<h3 id="将类数组转换为数组">将类数组转换为数组</h3>
+
+<p>以前，我们通常使用 <code class="highlighter-rouge">Array.prototype.slice.call()</code> 将 NodeList 和 arguments (类数组) 转化为数组。现在我们有一个更简单的方法。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span><span class="nx">z</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="kr">arguments</span><span class="p">]);</span>  <span class="c1">//false</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">([...</span><span class="kr">arguments</span><span class="p">]));</span> <span class="c1">//true</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="合并和复制数组">合并和复制数组</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//example 01</span>
+<span class="kd">let</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">arr2</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">arr1</span><span class="p">);</span>   <span class="c1">//[3,5,10]</span>
+
+<span class="c1">//example 02</span>
+<span class="kd">let</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'two'</span><span class="p">,</span> <span class="s1">'three'</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'one'</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr1</span><span class="p">,</span> <span class="s1">'four'</span><span class="p">,</span> <span class="s1">'five'</span><span class="p">];</span>    <span class="c1">//["one", "two", "three", "four", "five"]</span>
+
+<span class="c1">//example 03</span>
+<span class="kd">let</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr1</span><span class="p">];</span>
+<span class="nx">arr2</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr1</span><span class="p">);</span>  <span class="c1">//[1,2,3]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr2</span><span class="p">);</span>  <span class="c1">//[1,2,3,4]</span>
+
+<span class="c1">//example 04</span>
+<span class="kd">let</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">;</span>
+<span class="nx">arr2</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr1</span><span class="p">);</span>  <span class="c1">//[1,2,3,4]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr2</span><span class="p">);</span>  <span class="c1">//[1,2,3,4]</span>
+</code></pre></div></div>
+
+<p>尝试比较例子 3 和例子 4，分别是深度拷贝和浅拷贝。</p>
+
+<h3 id="解构">解构</h3>
+
+            </article>
+          <hr>
+          <blockquote><p>对于本文内容有问题或建议的小伙伴，欢迎在文章底部留言交流讨论。</p></blockquote>
+          <div class="text-center">
+            <a href="/donate/" target="_blank" style="text-decoration: none"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 您的支持是将是我写作最大的动力!</button></a>
+          </div>
+        </div>
+      </div>
+      <!--comment-->
+      <!--code for 网易云跟帖
+      <div class="panel docs-content">
+        <article class="post-content">
+          <div class="wrapper">
+            <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+            <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+            <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+            <script>
+            var cloudTieConfig = {
+            url: document.location.href, 
+            sourceId: "",
+            productKey: "b6d55f09637f497389b80bafc11aada1",
+            target: "cloud-tie-wrapper"
+            };
+            var yunManualLoad = true;
+            Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+            </script>
+          </div>
+        </article>
+      </div> -->
+      <!--Gitment-->
+      <div id="container"></div>
+      <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+      <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+      <script>
+        var gitment = new Gitment({
+          id: window.location.pathname, 
+          owner: 'maoxiaoke',
+          repo: 'maoxiaoke.github.io',
+          oauth: {
+          client_id: 'a884d93361c09d5c03b3',
+          client_secret: '73f1de789521db427d431e9f8488db2f974ee0ba',
+          },
+        })
+        gitment.render('container')
+      </script>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer" role="contentinfo">
+	<!--不蒜子pv/uv统计-->
+	<div class="post-meta">
+            <p>Total <span id="busuanzi_value_site_pv"></span> views，您是本站的第<span id="busuanzi_value_site_uv"></span>个小伙伴，<span id="busuanzi_value_page_pv"></span> Hits</p><br/>
+    </div>
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2017 <a href="http://luweb.gitee.io/me/" target="_blank"><code>Robin</code></a>. All rights reserved. </p>
+		<p>Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>， Data by <a href="https://tongji.baidu.com/web/23811489/overview/index" target="_blank">Bai Du</a>.</p>
+	</div>
+	<ul id="gotop"><li><span>TOP</span></li></ul>
+</footer>
+<script src="/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/libs/bootstrap/3.3.4/bootstrap.min.js "></script>
+<script async src="/libs/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+<script src="/styles/js/function.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.min.js"></script>
+  </body>
+</html>
