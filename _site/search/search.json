@@ -9,18 +9,674 @@
     
       {
         "title": "如何使用 Jacman 主题",
-        "date": "2015 年 09 月",
+        "date": "2015-09-20 00:00:00 +0800",
         "excerpt": "主题介绍\nJekyll-Jacman 是为 Jekyll 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。Jacman 始于 Jacman 移植而来。\n\n",
         
-        "url": "/github/2015/09/20/how-to-use-jacman/"
+        "url": "/2015/09/20/how-to-use-jacman/"
+      },
+    
+      {
+        "title": "包和NPM",
+        "date": "2017-01-17 17:26:15 +0800",
+        "excerpt": "\nNode组织了自身的核心模块，也使得第三方文件模块可以有序地编写和使用。\n\n",
+        
+        "url": "/2017/01/17/NPM-and-Package/"
+      },
+    
+      {
+        "title": "基于Jekyll静态框架的Github站点设计",
+        "date": "2017-02-22 00:00:00 +0800",
+        "excerpt": "\n这里主要是讲述这个博客搭建过程中的心酸历程，主要涉及的是Jekyll、Github、Cpanel等。也有搭建站点的一些内容。仅作后来人以及本人回顾。错误之处，请留言指正。\n\n",
+        
+        "url": "/2017/02/22/Jekyll-Cpanel/"
+      },
+    
+      {
+        "title": "Node的特点",
+        "date": "2017-03-06 09:26:15 +0800",
+        "excerpt": "\n  异步 I/O\n\n\n异步 I/O\n\n在Node中，绝大多数的操作都是以异步的方式进行调用。 这样的意义在于：在Node中，我们可以从语言层面很自然地进行并行I/O操作。\n\n每个调用之间无须等待之前的I/O调用结束，极大提高了效率。\n\n",
+        
+        "url": "/2017/03/06/Features-of-Node/"
+      },
+    
+      {
+        "title": "FreeCodeCamp的算法题",
+        "date": "2017-03-07 09:00:00 +0800",
+        "excerpt": "\n这里收集FreeCodeCamp上的所有的Javascript算法题目，自己的解答以及运行结果和思考。\n\n",
+        
+        "url": "/2017/03/07/Algorithms-from-freecodecamp/"
+      },
+    
+      {
+        "title": "AJAX",
+        "date": "2017-03-07 09:00:00 +0800",
+        "excerpt": "\nAJAX stands for Asynchronous JavaScript and XML. 它是使用 XMLHttpRequest对象与服务器端脚本进行通信。它可以发送以及接收各种格式的信息，包括JSON，XML，HTML，甚至文本文件。\n\n\n  XMLHttpRequest是一个API, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过URL来获取数据的简单方式，并且不会使整个页面刷新。这个对象充当着浏览器中的脚本（客户端）和服务器之间的中间人的角色。以往的请求都是由浏览器发出，而JavaScript通过这个对象可以自己发送请求，同时也自己处理响应。\n\n\nThe two major features of AJAX:\n\n\n  向服务器发出请求，而不重新加载页面\n  接收和处理服务器中的数据\n\n\n",
+        
+        "url": "/2017/03/07/AJAX/"
+      },
+    
+      {
+        "title": "JavaScript的循环和迭代",
+        "date": "2017-03-07 09:00:00 +0800",
+        "excerpt": "\nLoops offer a quick and easy way to do something repeatedly.\n\n",
+        
+        "url": "/2017/03/07/Loops-and-iteration/"
+      },
+    
+      {
+        "title": "JavaScript的表达式和运算符",
+        "date": "2017-03-10 09:00:00 +0800",
+        "excerpt": "\n常见的表达式和运算符都已经了解了，所以主要是一些不同的以及需要注意的点。\n\n",
+        
+        "url": "/2017/03/10/Expressions-and-operators/"
+      },
+    
+      {
+        "title": "JavaScript数组操作",
+        "date": "2017-03-13 09:00:00 +0800",
+        "excerpt": "\n以索引排序的数据组合，包括Arrays、Array object和TypeArray。\n\nAn array is an ordered set of values that you refer to with a name(数组名) and an index(索引).\n\nJavaScript中没有明确的数组数据类型。但是，我们可以通过使用内置Array对象和它的方法对数组进行操作。\n\n",
+        
+        "url": "/2017/03/13/Indexed-collections/"
+      },
+    
+      {
+        "title": "JavaScript中的number和date",
+        "date": "2017-03-13 09:00:00 +0800",
+        "excerpt": "\n在JavaScript，所有的数字都是64-bit双精度浮点类型。没有特定的整数数据类型。除了可以表示浮点数，the number type has three symbolic values: +Infinity、-Infinity、NaN。\n\n",
+        
+        "url": "/2017/03/13/Number-and-date/"
+      },
+    
+      {
+        "title": "JavaScript中的字符串",
+        "date": "2017-03-13 09:00:00 +0800",
+        "excerpt": "\nJavaScript中字符串是不可变的，而数组是可变的。字符串不可变是指字符串的成员函数不会改变其原始值，而是创建并返回一个新的字符串。而数组的成员函数都是在其原始值上进行操作。\n\nJavaScript中的String类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置。第一个元素的index值是0, 下一个元素的index值是1, 以此类推。字符串的长度就是字符串中所含的元素个数。你可以通过String字面值或者String对象两种方式创建一个字符串。\n\n",
+        
+        "url": "/2017/03/13/String/"
+      },
+    
+      {
+        "title": "JavaScript的对象模型",
+        "date": "2017-03-15 09:00:00 +0800",
+        "excerpt": "\nJavaScript是一种基于原型的面向对象的语言，而不是基于类的。\n\n基于类的面向对象的语言，是构建在两个不同实体的概念之上的：类和实例\n\n基于原型的语言不存在这种区别：只有对象。基于原型的语言具有所谓原型对象rototypical object的概念。原型对象可以作为一个模板，新对象可以从中获得原始的属性。任何对象都可以指定其自身的属性，既可以是创建时也可以在运行时创建。而且，任何对象都可以作为另一个对象的原型prototype，从而允许后者共享前者的属性。\n\n",
+        
+        "url": "/2017/03/15/Object-model/"
+      },
+    
+      {
+        "title": "JavaScript的数据结构和数据类型",
+        "date": "2017-03-21 09:00:00 +0800",
+        "excerpt": "\n关于数据类型和数据结构的概念，可以参考Wiki百科。\n\n在JavaScript中，对象是语言的中心，连functions也被视为对象。\n\nJavaScript有两种基本的数据类型： primitive type and reference type。两者都是通过对象进行访问的。原始类型保存为简单的数据值，引用类型则保存为对象(objects)，其本质是指向内存位置的引用。\n\n其它的编程语言用栈(stack)来储存原始类型，用堆(heap)来储存引用对象。JavaScript则完全不同：它使用一个variable object来追踪变量的生存周期，原始类型的值被直接保存在变量对象中，而引用类型的值作为一个指针保存在变量对象中，该指针指向实际对象在内存中的存储位置1。\n\n\n\n\n",
+        
+        "url": "/2017/03/21/Data-Structures-and-Types-and-Literals/"
+      },
+    
+      {
+        "title": "JavaScript中的函数",
+        "date": "2017-03-21 19:00:00 +0800",
+        "excerpt": "\n在JavaScript中，函数其实就是对象。使函数不同于其他对象的决定性特点时函数存在一个被称之为[[Call]]的内部属性。内部属性无法通过代码访问，而是定义了代码执行时的行为。\n\n\n  ECMAScript为对象定义了多种内部属性，这些内部属性都使用[[]]来标记。\n\n\n[[Call]]属性是函数独有的，表明该对象可以被执行。\n\n你可以像使用对象一样使用函数，可以将它们赋给变量，在对象中添加它们，将它们当成参数传递给别的函数，或从别的函数中返回。函数就是值。\n\nA function is a JavaScript procedure - a set of statements that performs a task or calculates a value.\n\n",
+        
+        "url": "/2017/03/21/Functions/"
+      },
+    
+      {
+        "title": "JavaScript的Object",
+        "date": "2017-03-22 19:00:00 +0800",
+        "excerpt": "\nJavaScript is designed on a simple object-based paradigm(简单的基于对象的范式)。\n\nAn object is a collection of properties, and a property is an association between a name (or key) and a value.\n\nA property’s value can be a function, 这种情况下，属性也被称为方法。\n\n",
+        
+        "url": "/2017/03/22/Objects/"
+      },
+    
+      {
+        "title": "再谈原型和继承",
+        "date": "2017-03-23 09:00:00 +0800",
+        "excerpt": "\n在Object Model这一节简单介绍了一下原型链和继承，由于最近在读Nicholas C.Zakas的The Principles of Object-Oriented JavaScript，又有了很多的启发，特记录在本文中。\n\n最开始，也是最基本的，我们需要了解构造函数、原型和实例的概念和它们之间的关系。\n\n",
+        
+        "url": "/2017/03/23/More-of-prototype/"
+      },
+    
+      {
+        "title": "对象模式",
+        "date": "2017-03-24 09:00:00 +0800",
+        "excerpt": "\nJavaScript的所有属性都是公有的，没有显式的方法可以指定某个属性不能被外界某个对象访问。通常的方法是通过命名规则，比如我们在不希望公有的属性名前加上下划线(_)。此外，还有些其他的方法。\n\n",
+        
+        "url": "/2017/03/24/Object-pattern/"
+      },
+    
+      {
+        "title": "原生JavaScript的DOM操作",
+        "date": "2017-03-31 19:00:00 +0800",
+        "excerpt": "\nDOM中的D指的是document，O指的是Object，在JavaScript语言中，有三种对象类型，分别是user-defined object、native object、host object，对于host object，指的是浏览器提供的对象，最基础的就是window本身了。其中的M，指的就是模型。\n\n那整个模型怎么解释呢？\n\n",
+        
+        "url": "/2017/03/31/Javascript-dom/"
+      },
+    
+      {
+        "title": "排序和查找算法",
+        "date": "2017-04-11 09:00:00 +0800",
+        "excerpt": "\nData Structure Visualizations提供了数据结构和算法的动画演示。\n\n不同的排序算法性质有所不同，衡量算法的效率，通常是用资源，例如CPU(时间)占用、内存占用、硬盘占用和网络占用。当讨论大O表示法时，一般考虑的是CPU占用。\n\n排序算法是重要的，因为排序算法是二分查找的第一个步骤。\n\nJavaScript的Array类定义了一个sort函数(Array.prototype.sort)用以排序JavaScript数组。ECMAScript没有定义用哪个排序算法，所以浏览器厂商可以自己去定义。\n\n",
+        
+        "url": "/2017/04/11/Sort-and-search-algorithm/"
+      },
+    
+      {
+        "title": "再来仔细研究DOM",
+        "date": "2017-04-11 19:00:00 +0800",
+        "excerpt": "\n之前，我们是通过«JavaScript DOM编程艺术»这本书来学习原生的 JavaScript DOM 编程。这里呢，想更加具体地将这些方法和属性都罗列出来。\n\n首先，理解节点(node)的概念。DOM 树其实就是一棵节点树，节点分为多种不同的类型。\n\n",
+        
+        "url": "/2017/04/11/DOM/"
+      },
+    
+      {
+        "title": "JavaScript的map/reduce",
+        "date": "2017-04-12 19:00:00 +0800",
+        "excerpt": "\n最近经常用到Array.prototype.map()和Array.prototype.reduce()函数，根据自己的理解，在此处记录。\n\n这两个都是内置对象Array的两个函数，用法也存在相似性。\n\n",
+        
+        "url": "/2017/04/12/Map-and-reduce/"
+      },
+    
+      {
+        "title": "强制类型转换",
+        "date": "2017-04-14 09:00:00 +0800",
+        "excerpt": "\n在介绍强制转换之前，不论是显式的还是隐式的，我们需要了解字符串、数字和布尔值之间类型转换的基本规则，这些规则(也叫抽象操作)是仅供内部使用的。\n\ntoString\n\n抽象操作toString负责处理非字符串到字符串的强制类型转换。基本类型值得字符串化规则是：null转换成\"null\"，undefined转换为\"undefined\"，true转换成\"true\"。数字的字符串化则遵循通用规则。\n\ntoNumber\n\n抽象操作toNumber处理非数字值到数字值的强制类型转换。规则如下：\n\n\n  true变成1，false变成0，undefined转换成NaN，null变成0\n  对字符串的处理基本遵循数字常量的相关规则和语法，处理失败返回NaN。\n  对象会首先转换为相应的基本类型值，如果返回的是非数字的基本类型值，则再遵循以上规则将其强制转换为数字。\n\n\n为了将值转换为相应的基本类型值，抽象操作ToPrimitive首先通过内部操作DefaultValue检查改制是否有valueOf()方法，如果有并且返回基本类型值，就使用该值进行强制类型转换。如果灭有就使用toString()的返回值来进行强制类型转换。如果两者都没有，产生TypeError错误。\n\n",
+        
+        "url": "/2017/04/14/Coercion/"
+      },
+    
+      {
+        "title": "First Meet Sass",
+        "date": "2017-04-25 00:00:00 +0800",
+        "excerpt": "\n  安装Sass\n  使用Sass编译命令\n  Sass变量\n  嵌套选择符    \n      注意伪元素\n    \n  \n  扩展    \n      使用占位符\n    \n  \n  Mixin 混入\n\n\nSass是怎么来的？我是这样理解的，有那么一群进入前端领域的攻城狮，发现css竟然不是程序语言，那怎么在其他前端攻城狮面前装逼呢？那能不能让css能听懂程序语言的指令呢？然后呢，他们就整了一套css预处理器，把编程的语法引入进来，然后美言之：less is more。\n\nSass更让人寻味的地方是它处理的是.scss文件。为什么不把后缀名改成.sass呢？\n\n下面是Sass的网络资源：\n\n\n  其一当然是官方网站：http://sass-lang.com/\n  官方参考文档： http://sass-lang.com/documentation/file.SASS_REFERENCE.html\n\n\n现在，让我们开始Sass的旅途。\n\n",
+        
+        "url": "/2017/04/25/First-Meet-Sass/"
+      },
+    
+      {
+        "title": "css的利器：使用Sass样式",
+        "date": "2017-04-25 19:00:00 +0800",
+        "excerpt": "\nSass是怎么来的？我是这样理解的，有那么一群进入前端领域的攻城狮，发现css竟然不是程序语言，那怎么在其他前端攻城狮面前装逼呢？那能不能让css能听懂程序语言的指令呢？然后呢，他们就整了一套css预处理器，把编程的语法引入进来，然后美言之：less is more。\n\nSass更让人寻味的地方是它处理的是.scss文件。为什么不把后缀名改成.sass呢？\n\n下面是Sass的网络资源：\n\n\n  其一当然是官方网站：http://sass-lang.com/\n  官方参考文档： http://sass-lang.com/documentation/file.SASS_REFERENCE.html\n\n\n现在，让我们开始Sass的旅途。\n\n",
+        
+        "url": "/2017/04/25/First-Meet-Sass/"
+      },
+    
+      {
+        "title": "First Meet Gulp",
+        "date": "2017-04-26 00:00:00 +0800",
+        "excerpt": "\n  常见的命令行操作\n  安装node.js\n  npm介绍    \n      答疑解惑 – package.json\n      答疑解惑 – devDependencies依赖 和 dependencies依赖\n    \n  \n  gulp的安装和运行    \n      1.全局安装gulp\n      2.如果你需要使用gulp命令行\n      3.作为项目的开发依赖安装(devDependencies)，安装到项目所在目录\n      4.在项目所在目录新建gulpfile.js文件\n      5. 运行gulp\n    \n  \n  常见的gulp插件\n  gulp-sass : 编译sass文件成css文件\n  gulp的应用    \n      我的第一个应用 – autoprefixer给常规css文件加厂商前缀        \n          该项目结构如下\n          本地安装gulp-autoprefixer\n          配置gufile.js\n          执行任务\n          福利\n        \n      \n    \n  \n  gulp有关的问题    \n      为啥有些要return 有些不需要\n    \n  \n\n\nGulp是一个基于Node.js的流式构建工具。可以使用它进行项目管理，方便地执行一些常见的任务。下面的文章按以下两点组织。\n\n\n  gulp的基本知识\n  gulp执行的常见任务\n\n\n首先，贴出一些可供参考的网站：\n\n\n  gulp官网\n  gulpgithub 地址\n  gulp官方插件地址\n  gulp详细入门教程\n\n\n使用gulp的基本步骤是：\n\n安装node.js -&gt; 全局安装gulp -&gt; 在项目里安装gulp和gulp插件 -&gt; 配置gulpfile.js文件 -&gt; 运行任务\n\n",
+        
+        "url": "/2017/04/26/First-Meet-Gulp/"
+      },
+    
+      {
+        "title": "初识gulp",
+        "date": "2017-04-26 09:00:00 +0800",
+        "excerpt": "\nGulp是一个基于Node.js的流式构建工具。可以使用它进行项目管理，方便地执行一些常见的任务。下面的文章按以下两点组织。\n\n\n  gulp的基本知识\n  gulp执行的常见任务\n\n\n首先，贴出一些可供参考的网站：\n\n\n  gulp官网\n  gulpgithub 地址\n  gulp官方插件地址\n  gulp详细入门教程\n\n\n使用gulp的基本步骤是：\n\n安装node.js -&gt; 全局安装gulp -&gt; 在项目里安装gulp和gulp插件 -&gt; 配置gulpfile.js文件 -&gt; 运行任务\n\n",
+        
+        "url": "/2017/04/26/First-Meet-Gulp/"
+      },
+    
+      {
+        "title": "来一次痛痛快快得闭包挑战",
+        "date": "2017-05-03 09:00:00 +0800",
+        "excerpt": "\n闭包在JavaScript是一个非常重要得概念，但我觉得又比较难理解。因为它和其他的语言不一样，其他语言有在函数内部调用其他函数，但是多个函数嵌套好像是没有的。\n\n在这之前，我觉得最好先了解一下作用域与变量提升。\n\n",
+        
+        "url": "/2017/05/03/Closures/"
+      },
+    
+      {
+        "title": "全排列的经典算法-heap's algorithms",
+        "date": "2017-05-05 09:00:00 +0800",
+        "excerpt": "\n全排列是一个是一个常见的问题，对于学过简单数学的人都知道，没有重复元素的全排列的个数是n! = n * (n-1) * ... * 2 * 1。比如：有三个元素[a,b,c]，全排列的结果是[a,b,c] [b,a,c] [a,c,b] [c,a,b] [b,c,a] [c,b,a]6种。\n\n",
+        
+        "url": "/2017/05/05/heap-algorithms/"
+      },
+    
+      {
+        "title": "Jekyll搭建博客--人类补完计划",
+        "date": "2017-05-09 00:00:00 +0800",
+        "excerpt": "\n这个是搭建Jekyll博客的第二个篇章，主要讲述如何增加博客一些新的功能，以及在此过程中遇到的一些新的知识。有关于如何搭建服务器，依托github pages来搭建Jekyll博客，可以点击此处找到。\n\n当然，对Jekyll的一些用法也会在此提及和归纳。\n\n",
+        
+        "url": "/2017/05/09/Jekyll-second/"
+      },
+    
+      {
+        "title": "CSS解密",
+        "date": "2017-05-13 09:00:00 +0800",
+        "excerpt": "\n最近再看&lt;&lt;CSS解密&gt;&gt;，是由W3C CSS工作组专家，设计CSS语言得委员之一，Lea Verou – 是一位漂亮、得体得女士，所写。主要讲述了CSS3新版本得一些特性，对网页得设计难题，有难得一见得解决方法。特将一些重点勾勒如下。\n\n另外，所强调的一点是：CSS tricks是一个相当棒的网站，提供了很多CSS的处理和难题解决方案。\n\n",
+        
+        "url": "/2017/05/13/CSS-secrets/"
+      },
+    
+      {
+        "title": "特指度--确定哪个样式胜出",
+        "date": "2017-05-16 09:00:00 +0800",
+        "excerpt": "\n有些CSS属性有些是可以继承的，有些是不可以继承的。在多个规则定义了相同的CSS属性，并且这些规则都应用在页面的同一元素上，有时候，会产生冲突。对于现代浏览器，有一种cascade的机制，用来进行冲突判定。\n\n有两种情况会导致样式冲突：\n\n\n  继承，从多个祖辈那里继承相同的属性，针对标签样式的继承\n  同一个元素有多个样式。比如说，我们为一个段落定义了Class样式，又定义了&lt;p&gt;标签样式\n\n\n",
+        
+        "url": "/2017/05/16/specificity-of-css/"
+      },
+    
+      {
+        "title": "First Meet Webpack",
+        "date": "2017-05-17 00:00:00 +0800",
+        "excerpt": "\n  基本概念    \n      入口 – entry\n      输出 – output\n      Loader\n      插件 – Plugins\n    \n  \n  第一个webpack项目    \n      webpack的安装\n      第一个bundle文件\n      配置webpack        \n          配合npm来使用\n        \n      \n    \n  \n\n\n其他链接：\n\n\n  Webpack第二课 – HTML、插件和webpack-dev-server篇\n  Webpack第三课 – HTML、CSS篇\n\n\n代码Github地址：\n\n\n  https://github.com/maoxiaoke/You-know-what-is-webpack\n\n\n想不到webpack比我想象中要难一点。\n\nwebpack是一个现代的JavaScript应用程序的模块打包器(module bundler)。但随着它的发展，有向前端代码管理工具演变的趋势。\n\n对于一个网站而言，之前的管理方式是：HTML文件、CSS样式、JavaScript文件、图片文件各自都是独立的，需要分开地管理每一个文件，然后确保一切正常运行。Gulp这样的任务管理工具就是在这个基础上发展而来，能处理不同的预处理器和编译器，任务一个接着一个进行。\n\n而webpack抛开了这种管理方式，在开发过程中的某一个阶段通过JavaScript去处理所有的依赖。比如说，我们可以利用loader将HTML/CSS文件打包成JS文件，然后再解析出来(这里说的有点糊涂，下次理解透彻再来)。\n\n",
+        
+        "url": "/2017/05/17/First-meet-Webpack/"
+      },
+    
+      {
+        "title": "Webpack第一课 -- 初识Webpack",
+        "date": "2017-05-17 09:00:00 +0800",
+        "excerpt": "\n其他链接：\n\n\n  Webpack第二课 – HTML、插件和webpack-dev-server篇\n  Webpack第三课 – HTML、CSS篇\n\n\n代码Github地址：\n\n\n  https://github.com/maoxiaoke/You-know-what-is-webpack\n\n\n想不到webpack比我想象中要难一点。\n\nwebpack是一个现代的JavaScript应用程序的模块打包器(module bundler)。但随着它的发展，有向前端代码管理工具演变的趋势。\n\n对于一个网站而言，之前的管理方式是：HTML文件、CSS样式、JavaScript文件、图片文件各自都是独立的，需要分开地管理每一个文件，然后确保一切正常运行。Gulp这样的任务管理工具就是在这个基础上发展而来，能处理不同的预处理器和编译器，任务一个接着一个进行。\n\n而webpack抛开了这种管理方式，在开发过程中的某一个阶段通过JavaScript去处理所有的依赖。比如说，我们可以利用loader将HTML/CSS文件打包成JS文件，然后再解析出来(这里说的有点糊涂，下次理解透彻再来)。\n\n",
+        
+        "url": "/2017/05/17/First-meet-Webpack/"
+      },
+    
+      {
+        "title": "Webpack Second",
+        "date": "2017-05-18 00:00:00 +0800",
+        "excerpt": "\n  HTML 和 HtmlWebpackPlugin 插件    \n      作为依赖安装\n      进行配置\n      利用template参数\n    \n  \n  开发    \n      监视模式\n      webpack-dev-server\n    \n  \n\n\n其他链接：\n\n\n  Webpack第一课 – 初识Webpack\n  Webpack第三课 – HTML、CSS篇\n\n\n代码Github地址：\n\n\n  https://github.com/maoxiaoke/You-know-what-is-webpack\n\n\n这里呢，打算将所有和html有关的操作都集合到这篇文章中来，用来熟悉webpack对html的操作。\n\n",
+        
+        "url": "/2017/05/18/Webpack-second/"
+      },
+    
+      {
+        "title": "Webpack第二课 -- HTML、插件和webpack-dev-server篇",
+        "date": "2017-05-18 09:00:00 +0800",
+        "excerpt": "\n其他链接：\n\n\n  Webpack第一课 – 初识Webpack\n  Webpack第三课 – HTML、CSS篇\n\n\n代码Github地址：\n\n\n  https://github.com/maoxiaoke/You-know-what-is-webpack\n\n\n这里呢，打算将所有和html有关的操作都集合到这篇文章中来，用来熟悉webpack对html的操作。\n\n",
+        
+        "url": "/2017/05/18/Webpack-second/"
+      },
+    
+      {
+        "title": "Webpack Third",
+        "date": "2017-05-19 00:00:00 +0800",
+        "excerpt": "\n  引入CSS\n  ExtractTextWebpackPlugin插件\n\n\n其他链接：\n\n\n  Webpack第一课 – 初识Webpack\n  Webpack第二课 – HTML、插件和webpack-dev-server篇\n\n\n代码Github地址：\n\n\n  https://github.com/maoxiaoke/You-know-what-is-webpack\n\n\n当然了，webpack也可以对CSS文件进行打包，将其作为模块引入到JavaScript代码中，然后利用Loader输出。本篇文章主要针对的就是对CSS的操作。\n\n",
+        
+        "url": "/2017/05/19/Webpack-third/"
+      },
+    
+      {
+        "title": "Webpack第三课 -- CSS篇",
+        "date": "2017-05-19 09:00:00 +0800",
+        "excerpt": "\n其他链接：\n\n\n  Webpack第一课 – 初识Webpack\n  Webpack第二课 – HTML、插件和webpack-dev-server篇\n\n\n代码Github地址：\n\n\n  https://github.com/maoxiaoke/You-know-what-is-webpack\n\n\n当然了，webpack也可以对CSS文件进行打包，将其作为模块引入到JavaScript代码中，然后利用Loader输出。本篇文章主要针对的就是对CSS的操作。\n\n",
+        
+        "url": "/2017/05/19/Webpack-third/"
+      },
+    
+      {
+        "title": "High Performance Responsive Design",
+        "date": "2017-05-25 09:00:00 +0800",
+        "excerpt": "\n最近读了Tom Barker的High Performance Responsive Design。对响应式设计有了更多的新理解，尤其是利弊和测试方面。\n\n在很多响应式架构中，我们都只注意到响应式的优点：能同时兼顾移动端和PC端，方便了开发。但是很多网站在设计时，并不能秉承移动优先的策略，或者完全放弃该策略。你就会发现，对于使用响应式构建的网站，需要加载更多的资源。这也意味着，相对于单独进行移动端和PC端建站，响应式页面加载的时间更长。这是值得响应式开发者深思的问题。\n\n",
+        
+        "url": "/2017/05/25/High-Performance-Responsive-Design/"
+      },
+    
+      {
+        "title": "Python语言笔记",
+        "date": "2017-06-04 09:00:00 +0800",
+        "excerpt": "\n将以前看的Introduction to Programming in Python时做的笔记，特地整理了一下放在博客上。书籍是开源的，内容可以到这个http://introcs.cs.princeton.edu/python/home/网站获取。结构如下：\n\n\n  1.1 内置数据类型\n  1.2 选择结构和循环结构\n  1.3 数组\n  2.1 函数\n  2.2 模块和客户端\n  2.3 对象\n  2.4 递归\n  3.1 面向对象的程序设计\n\n\n",
+        
+        "url": "/2017/06/04/Python-Base/"
+      },
+    
+      {
+        "title": "CommonJS模块规范",
+        "date": "2017-06-06 17:26:15 +0800",
+        "excerpt": "\nCommonJS的模块规范，是一种定位于服务器端的模块规范。\n\n\n  CommonJS对模块的定义十分简单，主要分为模块引用、模块定义和模块标识。\n\n\n",
+        
+        "url": "/2017/06/06/CommonJS/"
+      },
+    
+      {
+        "title": "Node异步编程",
+        "date": "2017-06-07 09:26:15 +0800",
+        "excerpt": "\n在讲解异步编程的时候，有必要先提到Event Loop(事件轮询)的概念。首先是运行时的一些概念。\n\n\n  函数调用形成了一个Stack(栈)\n\n\nfunction foo(){\n    ...\n}\nfunction bar(){\n    foo();\n    ...\n}\nbar();\n\n\n代码的最后一行调用bar()时，会在栈内创建第一个帧(帧的概念就是想表达一个意思)，包含了bar的参数和局部变量。当bar调用foo时，第二帧被创建，并压到bar创建的帧上。foo返回时，foo创建的帧就被弹出。直到所有函数返回，栈空。。\n\n",
+        
+        "url": "/2017/06/07/Asyn-Programing/"
+      },
+    
+      {
+        "title": "Node内置HTTP模块",
+        "date": "2017-06-08 09:26:15 +0800",
+        "excerpt": "\nHTTP是Node的一个核心模块，同时也是一些很底层的API。\n\nNode有为数不多的内置模块，HTTP是其中之一，fs也是。这些内置模块你通常可以在Node的官方网站的DOCS获取并了解他们的使用方法和API。HTTP的相关API放在了这里：https://nodejs.org/dist/latest-v6.x/docs/api/http.html\n\n\n  这是v6.11.0的版本，就是写博客的最近版本。可以在官网上获取到最新版本。其中标记为Stability:2 - Stable的表示为可放心食用的API，标记为Stability:1 - Experimental的表示为试验性质的API，标记为Stability:0 - Deprecated的表示为被弃用的API。\n\n\n在文档中很简要地介绍了一句：\n\n\nTo use the HTTP server and client one must require('http').\n\n\n",
+        
+        "url": "/2017/06/08/Node-Http/"
+      },
+    
+      {
+        "title": "Node和MongoDB数据库打交道",
+        "date": "2017-06-09 09:26:15 +0800",
+        "excerpt": "\n数据库有关系型数据库(RDBMS)，关系型数据库相对比较高端，也有很多种，但开源的我们一般都使用MySQL或者PostgreSQL。\n\n\n  MySQL一般会使用比较流行的Felix Geisendorfer的mysql模块\n  PostgreSQL一般使用Brian Carlson的node-postgres模块\n\n\n非关系型数据库在最近几年隐隐有复兴之势，他们称为NoSQL数据库，即：Not Only SQL。可以这么说，关系型数据库为了可靠性牺牲了性能，而很多NoSQL数据库把性能放在了第一位。两个非常流行的NoSQL数据库，就是Redis和MongoDB。\n\n\n  Redis一般使用Matt Ranney的redis模块\n  MongoDB最成熟最活跃的是Charistian Amor Kvalheim的mongodb模块\n\n\n",
+        
+        "url": "/2017/06/09/MognoDB/"
+      },
+    
+      {
+        "title": "CSS居中的完整教程[翻译]",
+        "date": "2017-06-10 09:00:00 +0800",
+        "excerpt": "\n\n  文章翻译自Chris Coyier的Centering in CSS: A Complete Guide。\n\n\n居中在CSS当中是颇让人抱怨的。为何如此艰难？。我认为问题不是因为太难，而是有太多不同的方法，在不同的场景中，很难知道如何去选择。\n\n所以，让我们实现一个决定树(decision tree)，希望能简化这个问题。\n\n我想居中….\n\n",
+        
+        "url": "/2017/06/10/Center/"
+      },
+    
+      {
+        "title": "CSS的布局方式",
+        "date": "2017-06-11 09:00:00 +0800",
+        "excerpt": "\n在CSS的布局世界中，大概有固定宽度布局、流式布局、响应式布局和弹性布局。固定宽度的布局，就是不管浏览器宽度有多宽，页面中内容的宽度始终一致。流式布局，就是宽度百分比设定，而不是绝对的像素值，这样随着改变浏览器窗口的尺寸，页面也随之变化。响应式布局主要是为不同宽度的尺寸的设备提供不同的布局。\n\n本文主要是总结一些常见的布局。\n\n",
+        
+        "url": "/2017/06/11/Layout/"
+      },
+    
+      {
+        "title": "Node的Express框架初体验",
+        "date": "2017-06-20 09:26:15 +0800",
+        "excerpt": "\n\n  Connect is an extensible HTTP server framework for node using “plugins” known as middleware.\n\n\n这是引自Connect官方仓库的一段文字，可以看到：Connect是一个服务器端框架。在Connnect中，中间件是一个函数，它拦截HTTP服务器提供的请求和响应对象，执行特定的逻辑，然后结束响应或者把她传递给下一个中间件组件。\n\nExpress也是一个Web框架，官方是这样介绍的：\n\n\n  Fast, unopinionated, minimalist web framework for Node.js.\n\n\n前期版本中，Express框架是构建在Connect之上，但是在最新的4.x版本中，我们引述了下面这段话：\n\n\n  Express 4 no longer depends on Connect, and removes all built-in middleware from its core, except for the express.static function. This means that Express is now an independent routing and middleware web framework, and Express versioning and releases are not affected by middleware updates.\n\n\n但是，对Connect的介绍仍对我们理解Express很有帮助。\n\n",
+        
+        "url": "/2017/06/20/Connect-and-Express/"
+      },
+    
+      {
+        "title": "Node中的标准输入输出流",
+        "date": "2017-06-21 09:00:00 +0800",
+        "excerpt": "\n在牛客网中对JavaScript程序员是很不友好的。在处理输入输出流的时候，总是得不到好的处理。在Windows平台下，在处理外部输入输出的时候也非常不擅长进行调试。所以这里，针对这个些问题，看看有没有解决方法。\n\n",
+        
+        "url": "/2017/06/21/Stdio/"
+      },
+    
+      {
+        "title": "前端面试集锦",
+        "date": "2017-06-22 09:00:00 +0800",
+        "excerpt": "\n又又又又又又又又又又又又又到了找工作的季节，各大公司又又又又又又又又又又又又又开始招聘了。我作为一个前端菜鸟，又开始慌了。人生没有一个目的很明确的方向真的会浪费很多时间，而浪费的时间都是青春。努努力力，兜兜转转，又要开始思考自己的人生方向了。时间来不及去荒废了，就像歌里面唱的：来不及认真地年轻，就认真地老去。\n\n就算很多公司不要你，你也要知道，哪怕现在的你不优秀，也并不意味着你永远不优秀。\n\n按照时间线分割。\n\n",
+        
+        "url": "/2017/06/22/Questions-of-front-end/"
+      },
+    
+      {
+        "title": "Node服务器端面试集锦",
+        "date": "2017-06-23 09:00:00 +0800",
+        "excerpt": "\n在这里，主要是记录遇到的面试 Node 相关的面试题。\n\n\n\n",
+        
+        "url": "/2017/06/23/Questions-of-Node/"
+      },
+    
+      {
+        "title": "集合、字典和散列(哈希)表",
+        "date": "2017-06-26 09:00:00 +0800",
+        "excerpt": "\n集合是由一组无序的且唯一的项组成的。集合这个结构，可以使用数学概念中的有限集合的概念来类比。在JavaScript中，ECMAScript 6使用Set类对集合进行了实现。\n\n在字典中，存储的是[键,值]对，其中键名用来查询特定的元素。可是使用实际的字典作为类比(单词和它们的释义)。在JavaScript中，ECMAScript 6使用Map类对集合进行了实现。\n\n散列表(hash table)是实现字典操作的一种有效的数据结构。目的呢，就是为了更方便地查询一个元素。下面会是具体介绍。\n\n",
+        
+        "url": "/2017/06/26/Set-Map-Hash/"
+      },
+    
+      {
+        "title": "树的基础",
+        "date": "2017-06-26 09:00:00 +0800",
+        "excerpt": "\n树也是一种非线性的数据结构。它对于存储需要快速查找的数据非常有用。有关树的常用术语有:\n\n\n  根节点，这个好理解，不多说\n  子树，子树由节点和它的后代构成\n  节点的深度，节点的深度取决于它的祖先节点的数量\n  树的深度，就是所有节点深度的最大值\n\n\n废话不多说，其实我们对这种结构还是理解挺多的。\n\n",
+        
+        "url": "/2017/06/26/Tree/"
+      },
+    
+      {
+        "title": "这一点点的图论基础",
+        "date": "2017-06-27 09:00:00 +0800",
+        "excerpt": "\n图也是一种非线性的数据结构，是网络结构的抽象模型，是一组由边连接的节点。图的表示法:\n\nG = (V,E)，其中V表示一组节点，E表示一组边。\n\n图论的理解有点难度，这里也是介绍一些基本点，仅仅包括图的表示和遍历。因为图论又有好多图，实在是好累。\n\n",
+        
+        "url": "/2017/06/27/Graph-theory/"
+      },
+    
+      {
+        "title": "First Meet Typescript",
+        "date": "2017-07-01 00:00:00 +0800",
+        "excerpt": "\n  TypeScript的编译    \n      到ES5的转换器\n      升级版Node\n      VSCode上配置typescript + nodejs 开发环境\n    \n  \n  TypeScript的特性    \n      类型        \n          Type assertions\n        \n      \n      高级类型        \n          Intersection Types\n          Union Types\n          Type Guards and Differentiating Types\n          Type Aliases\n        \n      \n      函数        \n          为函数定义类型\n          默认参数\n          可选参数\n          剩余参数\n          函数重载\n        \n      \n      类        \n          继承\n          修饰符\n          存取器\n        \n      \n    \n  \n\n\n\n  TypeScript is a typed superset of JavaScript that compiles to plain JavaScript来源.\n\n\n这意味着所有的ES6代码都是完全有效的且可编译的TypeScript代码(通俗一点，就是任何合法的JavaScript程序都是合法的TypeScript程序)。\n\n为什么我们需要使用TypeScript呢？目前广泛应用的JavaScript标准还是ES5，在如今大规模JavaScript应用中，由于它缺乏很多必要的特性，一些可维护性问题就暴露出来了。ES6旨在解决上述可维护性问题，但并没有完全实现，其次该标准的广泛采用，也是个漫长的过程。TypeScript应运而生，其中类型检查是它的一个非常重要的特性。\n\n如何学习TypeScript？目前我推荐的是官方的语言主页和该语言开源仓库的wiki主页，我尤其推荐后者，非常便于学习和查询。\n\n",
+        
+        "url": "/2017/07/01/First-Meet-TypeScript/"
+      },
+    
+      {
+        "title": "TypeScript详解",
+        "date": "2017-07-01 09:00:00 +0800",
+        "excerpt": "\n\n  TypeScript is a typed superset of JavaScript that compiles to plain JavaScript来源.\n\n\n这意味着所有的ES6代码都是完全有效的且可编译的TypeScript代码(通俗一点，就是任何合法的JavaScript程序都是合法的TypeScript程序)。\n\n为什么我们需要使用TypeScript呢？目前广泛应用的JavaScript标准还是ES5，在如今大规模JavaScript应用中，由于它缺乏很多必要的特性，一些可维护性问题就暴露出来了。ES6旨在解决上述可维护性问题，但并没有完全实现，其次该标准的广泛采用，也是个漫长的过程。TypeScript应运而生，其中类型检查是它的一个非常重要的特性。\n\n如何学习TypeScript？目前我推荐的是官方的语言主页和该语言开源仓库的wiki主页，我尤其推荐后者，非常便于学习和查询。\n\n",
+        
+        "url": "/2017/07/01/First-Meet-TypeScript/"
+      },
+    
+      {
+        "title": "First Meet Angular",
+        "date": "2017-07-04 00:00:00 +0800",
+        "excerpt": "\n  起步    \n      安装@angular/cli\n      创建一个新项目\n      运行这个应用\n    \n  \n  骨架    \n      src 文件夹\n      根目录\n      应用是如何启动的\n    \n  \n\n\nAngular系列教程:\n\n\n  Angular4第二课 – 基本概念解析\n  Angular4第三课 – 从Heroes的栗子看Angular\n\n\n\n  One framework. Mobile &amp; desktop.来源\n\n\n而Angular是什么呢？我看到这句话\n\n\n  Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges.来源\n\n\n上面说，Angular是一个框架，还整合了声明式模板、依赖注入和端对端工具。具体点呢？\n\n",
+        
+        "url": "/2017/07/04/First-Meet-Angular/"
+      },
+    
+      {
+        "title": "Angular4第一课 -- 启动",
+        "date": "2017-07-04 09:00:00 +0800",
+        "excerpt": "\nAngular系列教程:\n\n\n  Angular4第二课 – 基本概念解析\n  Angular4第三课 – 从Heroes的栗子看Angular\n\n\n\n  One framework. Mobile &amp; desktop.来源\n\n\n而Angular是什么呢？我看到这句话\n\n\n  Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges.来源\n\n\n上面说，Angular是一个框架，还整合了声明式模板、依赖注入和端对端工具。具体点呢？\n\n",
+        
+        "url": "/2017/07/04/First-Meet-Angular/"
+      },
+    
+      {
+        "title": "Angular Second",
+        "date": "2017-07-06 00:00:00 +0800",
+        "excerpt": "\n  架构\n  模块    \n      Angular模块系统: NgModule\n      Angular模块 vs. JavaScript模块\n      Angular模块库\n    \n  \n  组件\n  模板\n  元数据\n  数据绑定\n  指令\n  服务\n  依赖注入\n\n\nAngular系列教程:\n\n\n  Angular4第一课 – 启动\n  Angular4第三课 – 从Heroes的栗子看Angular\n\n\n上一节中主要是介绍了Angular的启动和命令。这一节仍然是介绍基础概念，而且，而且，而且(重要的事情说三遍)，这一节也主要参考官网的这篇文章，所以呢，大致会一样。\n\n",
+        
+        "url": "/2017/07/06/Angular-Second/"
+      },
+    
+      {
+        "title": "Angular4第二课 -- 基本概念解析",
+        "date": "2017-07-06 09:00:00 +0800",
+        "excerpt": "\nAngular系列教程:\n\n\n  Angular4第一课 – 启动\n  Angular4第三课 – 从Heroes的栗子看Angular\n\n\n上一节中主要是介绍了Angular的启动和命令。这一节仍然是介绍基础概念，而且，而且，而且(重要的事情说三遍)，这一节也主要参考官网的这篇文章，所以呢，大致会一样。\n\n",
+        
+        "url": "/2017/07/06/Angular-Second/"
+      },
+    
+      {
+        "title": "Angular Third",
+        "date": "2017-07-12 00:00:00 +0800",
+        "excerpt": "\n  表单    \n      引入表单\n      一个例子        \n          模板驱动的指令\n        \n      \n    \n  \n  多个组件通信\n  服务    \n      创建服务\n      导入服务\n    \n  \n  路由    \n      基地址\n      配置路由\n      将路由器加入AppModule\n      路由出口和路由链接\n      参数化路由\n    \n  \n  生命周期钩子\n\n\nAngular系列教程:\n\n\n  Angular4第一课 – 启动\n  Angular4第二课 – 基本概念解析\n\n\n为了学习Angular，实现了主页教程的Heroes例子。代码放在仓库Angular4-heroes下。但是，希望写单独为此写一篇的目的在于，这是一个非常好的例子，通过这个例子，我们可以详细地了解Angular有关表单、服务、注入、HTTP、路由等概念，所以非常值得初学者学习。\n\n",
+        
+        "url": "/2017/07/12/Angular-Third/"
+      },
+    
+      {
+        "title": "Angular4第三课 -- 从Heroes的栗子看Angular",
+        "date": "2017-07-12 09:00:00 +0800",
+        "excerpt": "\nAngular系列教程:\n\n\n  Angular4第一课 – 启动\n  Angular4第二课 – 基本概念解析\n\n\n为了学习Angular，实现了主页教程的Heroes例子。代码放在仓库Angular4-heroes下。但是，希望写单独为此写一篇的目的在于，这是一个非常好的例子，通过这个例子，我们可以详细地了解Angular有关表单、服务、注入、HTTP、路由等概念，所以非常值得初学者学习。\n\n",
+        
+        "url": "/2017/07/12/Angular-Third/"
+      },
+    
+      {
+        "title": "Flexbox的完全教程[翻译]",
+        "date": "2017-07-15 09:00:00 +0800",
+        "excerpt": "\n文章翻译自CSS-TRICKS的A Complete Guide to Flexbox。本译文会在不破坏原文的基础上进行删除和修正。\n\n弹性盒布局(Flexbox Layout)旨在为容器(container)内的项目(item)的布局、对齐和空间分配提供一个更为便捷的方式，即便它们的尺寸是未知的或可变(弹性)的。\n\n它的主要思想是，让容器可以改变子元素(项目)的宽度和长度，从而充分地填充空间。一个弹性容器通过扩展子元素可以有效地填满自由空间，或者收缩它们以防止溢出。\n\n",
+        
+        "url": "/2017/07/15/Flex/"
+      },
+    
+      {
+        "title": "两栏和三栏布局详解",
+        "date": "2017-07-16 09:00:00 +0800",
+        "excerpt": "\n布局中的两栏和三栏布局还是面试当中常考的一个点。其一是如何有多种方案，其二如果还要考虑优先加载内容区域呢。\n\n所以，这里总结的是这么四种情况，其中优先加载内容区域也是两栏、三栏布局中的一员。\n\n",
+        
+        "url": "/2017/07/16/Two-or-Three/"
+      },
+    
+      {
+        "title": "编写自己的代码库",
+        "date": "2017-07-20 09:00:00 +0800",
+        "excerpt": "\n做好基本总结，对于每一个程序员来讲都是重要的。最近看到一篇文章，文中说。\n\n\n  前端工程师要忘记前端二字。\n\n\n我深为折服，也颇为赞同。程序员所面临的无非是一个个问题，所做的也是解决一个一个难题。所谓语言、框架、工具、策略都是为了解决问题而服务的。很多人觉得JavaScript只能做一些写写脚本这一类前端的事，如果单纯这样去考虑，眼光未免太狭隘了。JavaScript大有所为，只有你想不到的，没有你做不到的，只有开拓语言的新应用范围，才能做到创造力，而不是单纯的紧跟时代所趋或追求于所谓的再创造力。\n\n周杰伦有一次接受采访，说，我从不关心流行，我创造流行(有待考据)。盲目去追求时代热潮也是不可取的，但这并不意味你要固步自封。良好的知识储备是必要的，是一切发展的基石。所以，不要看我们是前端程序员，算法、数据库、编译原理、操作系统等都应该具备。\n\n所以，勉励自己。\n\n",
+        
+        "url": "/2017/07/20/Clean-Code/"
       },
     
       {
         "title": "github pages创建和配置",
-        "date": "2017 年 07 月",
+        "date": "2017-07-23 00:00:00 +0800",
         "excerpt": "主题介绍\n使用github.io和Jekyll创建个人博客，用于学习和交流\n\n",
         
-        "url": "/github/2017/07/23/github-pages%E5%88%9B%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE/"
+        "url": "/2017/07/23/github-pages%E5%88%9B%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE/"
+      },
+    
+      {
+        "title": "github pages创建和配置",
+        "date": "2017-07-23 00:00:00 +0800",
+        "excerpt": "\n使用github.io和Jekyll创建个人博客，用于学习和交流\n\n",
+        
+        "url": "/2017/07/23/github-pages%E5%88%9B%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE/"
+      },
+    
+      {
+        "title": "CSS中的BFC规则",
+        "date": "2017-07-23 09:00:00 +0800",
+        "excerpt": "\nBFC(Block Formatting Context)，中文译成 “块级格式上下文”。标准解释:\n\n\n  Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with ‘overflow’ other than ‘visible’ (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents. – w3c\n\n\n首先，我们要理解什么是 block boxes(块盒子)。block boxes 和块级元素是不一致的。\n\n\n  标准中，是这样阐述的。每个 block-level element (块级元素) 产生 block-level box (块级盒)。block-level boxes 是参与到 BFC 的盒子。除了 table boxes，block-level box 也是 block container box (块容器盒)，block container box 要么包含 block-level boxes，要么创建 IFC 从而包含 inline-level box。并非所有的 block container boxes 是 block-level boxes。block-level boxes，同时也是 block containers 的就是 block boxes。好绕！标准就是这么绕人的。\n\n\n所以，我们理解: 浮动的、绝对定位的元素和块容器(比如 inline-blocks, table-cells 这些)都不是 block boxes，block boxes 是那些 overflow 不是 visible 的，两者共同为它们的内容创建了一个 BFC。\n\n\n  Formatting Context 是 W3C CSS2.1 规范中的一个概念它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。最常见的 Formatting context 有 BFC 和 Inline formatting context (简称 IFC)。CSS3 还增加了 GFC 和 FFC。\n\n\n",
+        
+        "url": "/2017/07/23/BFC/"
+      },
+    
+      {
+        "title": "REST和RESTful和Node",
+        "date": "2017-07-29 09:26:15 +0800",
+        "excerpt": "\n\n  REST is a set of architectural constraints that aid you when developing an API over HTTP. – Nicolas Bevacqua «JavaScript Application Design-A build first approach»\n\n\nREST: Resource Representational State Transfer。采用正译，叫资源表征状态转移。挨个理解:\n\n\n  Resource : 资源，也就是data(数据)。需要说明的是，资源的表征方式不是一个具体的物理文件，而是特定的格式类型。在HTTP中，由content-type描述。每一份资源都有特定的URL来标识。\n  Representational: 指的就是资源的表征形式。比如，json、xml、jpeg等等\n  State Transfer: 状态转移，即通过HTTP谓词来实现资源的状态变化。参考阮一峰的文章，他说。HTTP是一个无状态协议。这意味着，所有的状态都保存在服务器端。因此，如果客户端想要操作服务器，必须通过某种手段，让服务器端发生”状态转化”。而这种手段，就是HTTP谓词。这种转化是建立在表现层之上的，所以就是”表现层状态转化”。\n\n\n有人总结了下面这句话来描述REST：\n\n\n  URL定位资源，使用HTTP谓词来描述操作。\n\n\n",
+        
+        "url": "/2017/07/29/REST-and-RESTful/"
+      },
+    
+      {
+        "title": "Web Workers的前世今生",
+        "date": "2017-08-14 19:00:00 +0800",
+        "excerpt": "\nWeb Worker 的引入是因为 JavaScript 的单线程问题，使大计算量的问题会造成页面阻塞。为此，HTML 5 制订了 Web Worker 标准，通过创建工作线程来进行计算。\n\nWeb Workers 一般说来分为三类：\n\n\n  Dedicated workers: 专用 workers，Dedicated workers 只能被创建它的 JavaScript 所调用。它们是专门为某个特定的页面服务的，不能在页面中共享。\n  Shared workers: 共享 workers，Shared worker 可以多个浏览器上下文中调用，所有这些浏览器上下文必须同源(相同的协议，主机和端口号)。\n  Service workers\n\n\n",
+        
+        "url": "/2017/08/14/Web-Worker/"
+      },
+    
+      {
+        "title": "First Meet Cache",
+        "date": "2017-08-15 00:00:00 +0800",
+        "excerpt": "\n  HTTP 缓存机制    \n      expiration Model – 强缓存\n      validation Model – 协商缓存\n      HTTP 缓存过程总结\n      用户操作对缓存的影响\n    \n  \n  HTML5 应用缓存\n  数据存储    \n      Cookie\n      Web Storage        \n          sessionStorage\n          localStorage\n        \n      \n      IndexedDB\n    \n  \n\n\nWeb 缓存有很多种，比如数据库缓存、代理服务器缓存、CDN 缓存，以及浏览器缓存。\n\n浏览器缓存指的是将缓存文件保存在客户端，一般是通过 HTTP 进行缓存。\n\n",
+        
+        "url": "/2017/08/15/First-Meet-Cache/"
+      },
+    
+      {
+        "title": "Web缓存知多少(缓存机制和数据存储)",
+        "date": "2017-08-15 09:00:00 +0800",
+        "excerpt": "\nWeb 缓存有很多种，比如数据库缓存、代理服务器缓存、CDN 缓存，以及浏览器缓存。\n\n浏览器缓存指的是将缓存文件保存在客户端，一般是通过 HTTP 进行缓存。\n\n",
+        
+        "url": "/2017/08/15/First-Meet-Cache/"
+      },
+    
+      {
+        "title": "First Meet Https",
+        "date": "2017-08-16 00:00:00 +0800",
+        "excerpt": "\n  SSL    \n      共享密钥加密\n      公开密钥加密\n      HTTPS 采用混合加密方式\n      证明公开密钥正确性的证书\n    \n  \n  HTTPS 的工作流程\n\n\n在《图解 HTTP》书中，我们了解到为什么需要使用到安全的 HTTPS 通信。\n\n\n  通信使用明文会被窃听。所以进行加密处理防止被窃听，通过 SSL(Secure Socket Layer，安全套接层) 或 TLS(Transport Layer Security，安全层传输协议)组合使用，加密 HTTP 通信内容。\n  通信方的身份可能遭遇伪装，HTTP 协议中的请求和响应不会对通信方进行确认。这个由 SSL 提供的数字证书来解决。\n  无法确认报文的完整性。\n\n\n",
+        
+        "url": "/2017/08/16/First-Meet-HTTPS/"
+      },
+    
+      {
+        "title": "HTTPS加密通信",
+        "date": "2017-08-16 09:00:00 +0800",
+        "excerpt": "\n在《图解 HTTP》书中，我们了解到为什么需要使用到安全的 HTTPS 通信。\n\n\n  通信使用明文会被窃听。所以进行加密处理防止被窃听，通过 SSL(Secure Socket Layer，安全套接层) 或 TLS(Transport Layer Security，安全层传输协议)组合使用，加密 HTTP 通信内容。\n  通信方的身份可能遭遇伪装，HTTP 协议中的请求和响应不会对通信方进行确认。这个由 SSL 提供的数字证书来解决。\n  无法确认报文的完整性。\n\n\n",
+        
+        "url": "/2017/08/16/First-Meet-HTTPS/"
+      },
+    
+      {
+        "title": "让人头疼的函数内this的指向",
+        "date": "2017-08-16 09:00:00 +0800",
+        "excerpt": "\nJavaScript 颇让费解的东西 this 为何出现呢，机制是提供更优雅的方式来隐式地“传递”一个对象引用。对于 this 的很多误解和使用，建议收看 You-Dont-Know-JS。本文主要是在它的基础上整合的内容。\n\n每个函数在被调用时都会自动取得两个特殊的变量: this 和 arguments。需要说明的是，this 不是编写时绑定，而是运行时绑定。它依赖于函数调用的上下文条件。this 绑定与函数声明的位置没有任何关系，而与函数被调用的方式紧密相连。\n\n",
+        
+        "url": "/2017/08/16/This/"
+      },
+    
+      {
+        "title": "First Meet React",
+        "date": "2017-08-19 00:00:00 +0800",
+        "excerpt": "\n  Hello World\n  JSX 语法    \n      JSX 也是表达式\n      自动分号补全\n      闭合标签\n      使用 JSX 确定属性\n      JSX 注释\n      展开运算符\n      自定义组件需要首字母大写\n    \n  \n  ReactDOM.render()\n  组件 – Components    \n      渲染一个组件\n      props\n    \n  \n  组件的生命周期    \n      Mounting\n      Updating\n      Unmounting\n      Error Handling\n    \n  \n  React 事件处理函数\n  this\n  Todo-list    \n      组件分割\n      入口文件\n      父组件 TodoList.jsx\n      子组件 TodoForm.jsx\n      子组件 ItemsList.jsx\n      敲黑板，父子组件的通信\n      敲黑板，子组件间的通信\n      敲黑板，处理列表 &lt;li&gt;\n      敲黑板，受控组件\n      引入 Bootstrap\n      Github 地址\n    \n  \n\n\n\n  A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES. 来源\n\n\nReact 就是定义用户界面的 UI 库。\n\n接着，我们要从更高的一个立意来理解 React。很自然的对比，就是 jQuery vs React。在使用 jQuery 时，设计的理念是通过 CSS 规则找到一个元素，然后操纵这个节点做一些事情，这是个非常容易理解的理念。但是，打一个比方，我们将一个应用比作建房子。那么如果使用 jQuery，就意味着你必须事无巨细地告诉它“如何去做”，这是很累的，因为 jQuery 是一个没有文化的建筑工人。\n\nReact 专注于 view 层。 它提供一个新的思维方式，就是关注视图层的渲染，将如何去做转变为想要显示什么。有一个公式可以表现：\n\nUI = render(data)\n\n\n  这里的 render() 应该是个 纯函数，这是个函数式编程的概念。只接收 data，然后进行用户界面的渲染。\n\n\n所以，想要更新 UI，要做的就是更新 data，对应的就是 React 中的 state 的概念。\n\n",
+        
+        "url": "/2017/08/19/First-Meet-React/"
+      },
+    
+      {
+        "title": "React Second",
+        "date": "2017-08-20 00:00:00 +0800",
+        "excerpt": "\n  初始化配置 Webpack\n  目录结构\n  配置 Babel\n  Html-Webpack-Plugin\n  webpack-dev-server 配置\n  小甜点    \n      babel-preset-react-hmre\n      react-hot-loader\n    \n  \n\n\n完成一个 React 之初，就是要构建一个脚手架工具，要支持 ES6 和 JSX 语法。在这一块，用 Webpack 就胜过 Gulp，所以我们使用 Webpack 来进行模块打包。当然，也可以使用 Gulp + Webpack 来构建，这个有心情的时候再整整吧。\n\n\n  官方也提供一个 react-scripts 模块来提供脚手架。你也可以使用它，但能够自定义的话，也许是最好的选择。\n\n\n",
+        
+        "url": "/2017/08/20/React-Second/"
+      },
+    
+      {
+        "title": "React+Webpack+ES6+JSX 脚手架工具",
+        "date": "2017-08-20 09:00:00 +0800",
+        "excerpt": "\n完成一个 React 之初，就是要构建一个脚手架工具，要支持 ES6 和 JSX 语法。在这一块，用 Webpack 就胜过 Gulp，所以我们使用 Webpack 来进行模块打包。当然，也可以使用 Gulp + Webpack 来构建，这个有心情的时候再整整吧。\n\n\n  官方也提供一个 react-scripts 模块来提供脚手架。你也可以使用它，但能够自定义的话，也许是最好的选择。\n\n\n",
+        
+        "url": "/2017/08/20/React-Second/"
+      },
+    
+      {
+        "title": "JavaScript 异步编程",
+        "date": "2017-08-23 09:00:00 +0800",
+        "excerpt": "\n异步编程是 JavaScript 中一个非常重要的概念。异步的核心是现在和稍后。也就是说我们的一个 JavaScript 程序，仅有其中的一个代码块会在 现在 执行，而其他的会 稍后 执行。\n\n最常见的异步编程就是回调函数了。\n\n",
+        
+        "url": "/2017/08/23/Async-Programming/"
+      },
+    
+      {
+        "title": "参与开源翻译的正确姿势",
+        "date": "2017-10-08 09:00:00 +0800",
+        "excerpt": "\n开源是一种精神。\n\n从今年三月份开始，就参与到一个开源的翻译项目中。项目名称是：JavaScript tutorial，是一个免费的 JavaScript 的教程，作者在 Github 开源。欢迎大家加入进来。\n\n",
+        
+        "url": "/2017/10/08/Translation/"
+      },
+    
+      {
+        "title": "First Meet Json",
+        "date": "2017-10-18 00:00:00 +0800",
+        "excerpt": "\n  标准的 JSON 语法    \n      与 JavaScript 对象的区别\n      JSON 验证工具\n      JSON 的媒体类型\n      JSON 的数据类型        \n          对象数据类型\n          字符串类型\n          数字类型\n          boolean 类型\n          null 类型\n          数组类型\n        \n      \n    \n  \n  JSON Schema\n  JSON 序列和反序列化\n  JSON 中的安全问题\n  JSON 的其他应用场景    \n      与数据库交互\n      服务器端的 JSON\n      作为配置文件\n    \n  \n\n\n\n  本文部分内容来自 《Introduction to JavaScript Object Notation》，http://www.json.org/。\n\n\nJSON (JavaScript Object Notation)，是一种轻量级的数据交换格式来源。源于 JavaScript 的一个子集。但是它独立于编程语言。JSON 之父是 Douglas Crockford。\n\n",
+        
+        "url": "/2017/10/18/First-Meet-JSON/"
+      },
+    
+      {
+        "title": "JSON 必知必会",
+        "date": "2017-10-18 09:00:00 +0800",
+        "excerpt": "\n\n  本文部分内容来自 《Introduction to JavaScript Object Notation》，http://www.json.org/。\n\n\nJSON (JavaScript Object Notation)，是一种轻量级的数据交换格式来源。源于 JavaScript 的一个子集。但是它独立于编程语言。JSON 之父是 Douglas Crockford。\n\n",
+        
+        "url": "/2017/10/18/First-Meet-JSON/"
+      },
+    
+      {
+        "title": "深入理解 ES6",
+        "date": "2017-10-21 09:00:00 +0800",
+        "excerpt": "\n在编写自己的代码库中我曾经表达了自己对 JavaScript 的理解。今日(2017.10.21)阅读 Nicholas C.Zakes 的 《Understanding ES6》，Redux 的创造者 Dan Abramov 在序言中提到：\n\n\n  JavaScript was not a toy language.\n\n\n是的，JavaScript 并不是(或者说不再是)一门“玩具”语言了。所以不，本文主要聚焦于 ES6 的一些 new feature，以及表达一些自我的理解。\n\n",
+        
+        "url": "/2017/10/21/Understanding-ES6/"
+      },
+    
+      {
+        "title": "JavaScript tips",
+        "date": "2017-10-22 09:00:00 +0800",
+        "excerpt": "\n在这里，主要是累计 JavaScript 编程过程中的一些小的 tips，作为对编写自己的代码库 一节的补充。\n\n同时，也是希望写出更为可靠的代码。\n\n",
+        
+        "url": "/2017/10/22/JS-Tips/"
+      },
+    
+      {
+        "title": "Visual Studio Code Regexp",
+        "date": "2017-11-16 23:10:00 +0800",
+        "excerpt": "\n本文主要通过在vscode使用正则表达式减少手工重复排版问题\n\n",
+        
+        "url": "/2017/11/16/Visual-Studio-Code-Regexp/"
+      },
+    
+      {
+        "title": "Shell获取某个网页所有的http或https根域名",
+        "date": "2017-11-20 23:10:00 +0800",
+        "excerpt": "\n本文主要通过shell脚本使用正则表达式匹配某个网页所有的http或https根域名\n\n",
+        
+        "url": "/2017/11/20/Shell%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E7%BD%91%E9%A1%B5%E6%89%80%E6%9C%89%E7%9A%84http%E6%88%96https%E6%A0%B9%E5%9F%9F%E5%90%8D/"
       },
     
   
@@ -32,6 +688,158 @@
     "excerpt": "\n",
     
     "url": "/about/"
+  },
+  
+  {
+    "title": "json",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/effects/demo/demo-json/"
+  },
+  
+  {
+    "title": "DEMO",
+    "date": "2017-04-18 09:00:00 +0800",
+    "excerpt": "\n",
+    
+    "url": "/effects/"
+  },
+  
+  {
+    "title": "标签目录",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/tag/"
+  },
+  
+  {
+    "title": "博文分类",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/categories/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/"
+  },
+  
+  {
+    "title": "赞助名单",
+    "date": "2017-02-22 09:08:15 +0800",
+    "excerpt": "\n",
+    
+    "url": "/donate/list/"
+  },
+  
+  {
+    "title": "打赏",
+    "date": "2017-02-18 18:34:51 +0800",
+    "excerpt": "\n",
+    
+    "url": "/donate/"
+  },
+  
+  {
+    "title": "哎呦喂！！！",
+    "date": "2017-04-01 13:15:15 +0800",
+    "excerpt": "\n",
+    
+    "url": "/reference/"
+  },
+  
+  {
+    "title": "Jacman",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/README_en/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page2/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page3/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page4/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page5/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page6/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page7/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page8/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page9/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page10/"
+  },
+  
+  {
+    "title": "ROWEB",
+    "date": " ",
+    "excerpt": "\n",
+    
+    "url": "/page11/"
   }
   
 ]

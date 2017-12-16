@@ -171,7 +171,7 @@ Union types用来声明那些可以存储多种类型值的变量。比如，有
 
 ```ts
 let value: string | number;
-value = 'xiaokedada.com'; // ok
+value = 'roweb.cn'; // ok
 value = '10'; // ok
 ```
 
